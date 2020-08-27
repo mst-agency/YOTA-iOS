@@ -1,0 +1,21 @@
+//
+//  UIColor.swift
+//  yota
+//
+//  Created by Victor on 27.08.2020.
+//  Copyright © 2020 MST. All rights reserved.
+//
+
+import UIKit
+
+extension UIColor {
+    struct Money {
+        static let mainTitle = UIColor(red: 0.2705882353, green: 0.6823529412, blue: 0.9176470588, alpha: 1)
+        static let background = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        static let title = UIColor(red: 0.263, green: 0.298, blue: 0.365, alpha: 1)
+    }
+
+    struct CardIfno {
+        static let background = UIColor(red: 0.918, green: 0.933, blue: 0.957, alpha: 0.5)
+    }
+}
