@@ -14,9 +14,6 @@
 		340B083B24F91EAA00F83766 /* CardInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B083A24F91EAA00F83766 /* CardInfoView.swift */; };
 		340B083D24F91FCD00F83766 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B083C24F91FCD00F83766 /* Currency.swift */; };
 		341C7D3D24F40E6500C6EA9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C7D3C24F40E6500C6EA9C /* AppDelegate.swift */; };
-		341C7D3F24F40E6500C6EA9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C7D3E24F40E6500C6EA9C /* SceneDelegate.swift */; };
-		341C7D4124F40E6500C6EA9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C7D4024F40E6500C6EA9C /* ViewController.swift */; };
-		341C7D4424F40E6500C6EA9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341C7D4224F40E6500C6EA9C /* Main.storyboard */; };
 		341C7D4624F40E6600C6EA9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341C7D4524F40E6600C6EA9C /* Assets.xcassets */; };
 		341C7D4924F40E6600C6EA9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341C7D4724F40E6600C6EA9C /* LaunchScreen.storyboard */; };
 		341C7D5424F40E6600C6EA9C /* yotaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C7D5324F40E6600C6EA9C /* yotaTests.swift */; };
@@ -42,6 +39,13 @@
 		34D45E0824FA76F900A56152 /* MoneyHeaderViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */; };
 		34D45E0A24FA778900A56152 /* MoneyHeaderViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0924FA778900A56152 /* MoneyHeaderViewOutput.swift */; };
 		34D45E0C24FA77BA00A56152 /* MoneyHeaderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0B24FA77BA00A56152 /* MoneyHeaderPresenter.swift */; };
+		3ADA2AC824F84FB800CB6E89 /* MainScreenViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2AC724F84FB800CB6E89 /* MainScreenViewOutput.swift */; };
+		3ADA2ACA24F84FCC00CB6E89 /* MainScreenModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2AC924F84FCC00CB6E89 /* MainScreenModuleOutput.swift */; };
+		3ADA2ACC24F84FEF00CB6E89 /* MainScreenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2ACB24F84FEF00CB6E89 /* MainScreenInput.swift */; };
+		3ADF305E24F8427200DE8045 /* MainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */; };
+		3AFCCB3424F7FA230083C773 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCCB3324F7FA220083C773 /* MainScreenViewController.swift */; };
+		3AFCCB3624F7FA450083C773 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCCB3524F7FA450083C773 /* MainScreenPresenter.swift */; };
+		3AFCCB3924F810CE0083C773 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCCB3824F810CE0083C773 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +74,6 @@
 		340B083C24F91FCD00F83766 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		341C7D3924F40E6500C6EA9C /* yota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yota.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		341C7D3C24F40E6500C6EA9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		341C7D3E24F40E6500C6EA9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		341C7D4024F40E6500C6EA9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		341C7D4324F40E6500C6EA9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		341C7D4524F40E6600C6EA9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		341C7D4824F40E6600C6EA9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341C7D4A24F40E6600C6EA9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +104,13 @@
 		34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderViewInput.swift; sourceTree = "<group>"; };
 		34D45E0924FA778900A56152 /* MoneyHeaderViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderViewOutput.swift; sourceTree = "<group>"; };
 		34D45E0B24FA77BA00A56152 /* MoneyHeaderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderPresenter.swift; sourceTree = "<group>"; };
+		3ADA2AC724F84FB800CB6E89 /* MainScreenViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewOutput.swift; sourceTree = "<group>"; };
+		3ADA2AC924F84FCC00CB6E89 /* MainScreenModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModuleOutput.swift; sourceTree = "<group>"; };
+		3ADA2ACB24F84FEF00CB6E89 /* MainScreenInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInput.swift; sourceTree = "<group>"; };
+		3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenConfigurator.swift; sourceTree = "<group>"; };
+		3AFCCB3324F7FA220083C773 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		3AFCCB3524F7FA450083C773 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		3AFCCB3824F810CE0083C773 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,18 +180,14 @@
 			isa = PBXGroup;
 			children = (
 				34951A9E24F98C1D002FF3C7 /* Common */,
-				341C7D3C24F40E6500C6EA9C /* AppDelegate.swift */,
-				341C7D3E24F40E6500C6EA9C /* SceneDelegate.swift */,
-				341C7D4024F40E6500C6EA9C /* ViewController.swift */,
 				340B083724F91E0400F83766 /* Entities */,
 				34951AA524F9913E002FF3C7 /* BusinessLogicLayer */,
 				344E2A3124F81E3D00E9A24F /* PresentationLayer */,
 				344E2A2C24F81C7600E9A24F /* Extensions */,
 				347A5C4F24F7168100EDF0D2 /* Fonts */,
-				341C7D4224F40E6500C6EA9C /* Main.storyboard */,
-				341C7D4524F40E6600C6EA9C /* Assets.xcassets */,
-				341C7D4724F40E6600C6EA9C /* LaunchScreen.storyboard */,
-				341C7D4A24F40E6600C6EA9C /* Info.plist */,
+				3AFCCB3A24F831E70083C773 /* Main files */,
+				3AFCCB3B24F831F80083C773 /* Coordinators */,
+				3AFCCB3724F7FC0E0083C773 /* MainScreen */,
 			);
 			path = yota;
 			sourceTree = "<group>";
@@ -345,6 +349,62 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		3ADF305F24F8470800DE8045 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3ADA2ACB24F84FEF00CB6E89 /* MainScreenInput.swift */,
+				3AFCCB3324F7FA220083C773 /* MainScreenViewController.swift */,
+				);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3ADF306024F8471000DE8045 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3ADA2AC724F84FB800CB6E89 /* MainScreenViewOutput.swift */,
+				3ADA2AC924F84FCC00CB6E89 /* MainScreenModuleOutput.swift */,
+				3AFCCB3524F7FA450083C773 /* MainScreenPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3ADF306124F8471500DE8045 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		3AFCCB3724F7FC0E0083C773 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3ADF305F24F8470800DE8045 /* View */,
+				3ADF306024F8471000DE8045 /* Presenter */,
+				3ADF306124F8471500DE8045 /* Configurator */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		3AFCCB3A24F831E70083C773 /* Main files */ = {
+			isa = PBXGroup;
+			children = (
+				341C7D3C24F40E6500C6EA9C /* AppDelegate.swift */,
+				341C7D4524F40E6600C6EA9C /* Assets.xcassets */,
+				341C7D4724F40E6600C6EA9C /* LaunchScreen.storyboard */,
+				341C7D4A24F40E6600C6EA9C /* Info.plist */,
+			);
+			path = "Main files";
+			sourceTree = "<group>";
+		};
+		3AFCCB3B24F831F80083C773 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				3AFCCB3824F810CE0083C773 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,7 +515,6 @@
 				341C7D4624F40E6600C6EA9C /* Assets.xcassets in Resources */,
 				347A5C5524F7170B00EDF0D2 /* Circe-ExtraBold.ttf in Resources */,
 				347A5C5324F7170B00EDF0D2 /* Circe-Regular.ttf in Resources */,
-				341C7D4424F40E6500C6EA9C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +563,6 @@
 				34951AA724F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift in Sources */,
 				344E2A3C24F85A5000E9A24F /* MoneyPresenter.swift in Sources */,
 				346E7DAB24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift in Sources */,
-				341C7D4124F40E6500C6EA9C /* ViewController.swift in Sources */,
 				34D45E0A24FA778900A56152 /* MoneyHeaderViewOutput.swift in Sources */,
 				344E2A4024F87A1C00E9A24F /* MoneyModuleInput.swift in Sources */,
 				346E7DA924FBDD4000C9712D /* MoneyHeaderModuleInput.swift in Sources */,
@@ -516,18 +574,24 @@
 				34D45E0824FA76F900A56152 /* MoneyHeaderViewInput.swift in Sources */,
 				340B083224F903D000F83766 /* MoneyWidgetViewInput.swift in Sources */,
 				340B083324F903D000F83766 /* MoneyWidgetViewOutput.swift in Sources */,
-				341C7D3D24F40E6500C6EA9C /* AppDelegate.swift in Sources */,
 				344E2A2E24F81CD700E9A24F /* UIFont.swift in Sources */,
 				34951AA324F98CC6002FF3C7 /* AccountNumberFormatter.swift in Sources */,
 				344E2A4224F87A3900E9A24F /* MoneyModuleOutput.swift in Sources */,
 				340B083624F9076600F83766 /* MoneyModuleConfigurator.swift in Sources */,
 				340B083D24F91FCD00F83766 /* Currency.swift in Sources */,
-				341C7D3F24F40E6500C6EA9C /* SceneDelegate.swift in Sources */,
 				34D45E0C24FA77BA00A56152 /* MoneyHeaderPresenter.swift in Sources */,
 				340B083B24F91EAA00F83766 /* CardInfoView.swift in Sources */,
 				34D45E0324FA750600A56152 /* MoneyHeadertView.swift in Sources */,
 				34951AA924F99E7B002FF3C7 /* PaySystem.swift in Sources */,
 				340B083924F91E2F00F83766 /* CardInfo.swift in Sources */,
+				3ADF305E24F8427200DE8045 /* MainScreenConfigurator.swift in Sources */,
+				3AFCCB3924F810CE0083C773 /* AppCoordinator.swift in Sources */,
+				3ADA2ACA24F84FCC00CB6E89 /* MainScreenModuleOutput.swift in Sources */,
+				3ADA2AC824F84FB800CB6E89 /* MainScreenViewOutput.swift in Sources */,
+				3ADA2ACC24F84FEF00CB6E89 /* MainScreenInput.swift in Sources */,
+				3AFCCB3424F7FA230083C773 /* MainScreenViewController.swift in Sources */,
+				3AFCCB3624F7FA450083C773 /* MainScreenPresenter.swift in Sources */,
+				341C7D3D24F40E6500C6EA9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,14 +627,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		341C7D4224F40E6500C6EA9C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				341C7D4324F40E6500C6EA9C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		341C7D4724F40E6600C6EA9C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -702,7 +758,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NURV9Z698E;
-				INFOPLIST_FILE = yota/Info.plist;
+				INFOPLIST_FILE = "yota/Main files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -720,7 +776,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NURV9Z698E;
-				INFOPLIST_FILE = yota/Info.plist;
+				INFOPLIST_FILE = "yota/Main files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
