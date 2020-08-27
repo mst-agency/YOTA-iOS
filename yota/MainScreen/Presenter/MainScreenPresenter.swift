@@ -6,7 +6,7 @@
 //  Copyright © 2020 MST. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 final class MainScreenPresenter {
 
