@@ -27,6 +27,8 @@
 		344E2A4224F87A3900E9A24F /* MoneyModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A4124F87A3900E9A24F /* MoneyModuleOutput.swift */; };
 		346E7DA924FBDD4000C9712D /* MoneyHeaderModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DA824FBDD4000C9712D /* MoneyHeaderModuleInput.swift */; };
 		346E7DAB24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DAA24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift */; };
+		346E7DC024FC076800C9712D /* MainScreenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DBE24FC076800C9712D /* MainScreenInput.swift */; };
+		346E7DC124FC076800C9712D /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DBF24FC076800C9712D /* MainScreenViewController.swift */; };
 		347A5C4424F7061900EDF0D2 /* MoneyWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347A5C4324F7061900EDF0D2 /* MoneyWidgetView.swift */; };
 		347A5C5324F7170B00EDF0D2 /* Circe-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5024F7170B00EDF0D2 /* Circe-Regular.ttf */; };
 		347A5C5424F7170B00EDF0D2 /* Circe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5124F7170B00EDF0D2 /* Circe-Bold.ttf */; };
@@ -41,9 +43,7 @@
 		34D45E0C24FA77BA00A56152 /* MoneyHeaderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0B24FA77BA00A56152 /* MoneyHeaderPresenter.swift */; };
 		3ADA2AC824F84FB800CB6E89 /* MainScreenViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2AC724F84FB800CB6E89 /* MainScreenViewOutput.swift */; };
 		3ADA2ACA24F84FCC00CB6E89 /* MainScreenModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2AC924F84FCC00CB6E89 /* MainScreenModuleOutput.swift */; };
-		3ADA2ACC24F84FEF00CB6E89 /* MainScreenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2ACB24F84FEF00CB6E89 /* MainScreenInput.swift */; };
 		3ADF305E24F8427200DE8045 /* MainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */; };
-		3AFCCB3424F7FA230083C773 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCCB3324F7FA220083C773 /* MainScreenViewController.swift */; };
 		3AFCCB3624F7FA450083C773 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCCB3524F7FA450083C773 /* MainScreenPresenter.swift */; };
 		3AFCCB3924F810CE0083C773 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCCB3824F810CE0083C773 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +92,8 @@
 		344E2A4124F87A3900E9A24F /* MoneyModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModuleOutput.swift; sourceTree = "<group>"; };
 		346E7DA824FBDD4000C9712D /* MoneyHeaderModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderModuleInput.swift; sourceTree = "<group>"; };
 		346E7DAA24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderModuleOutput.swift; sourceTree = "<group>"; };
+		346E7DBE24FC076800C9712D /* MainScreenInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenInput.swift; sourceTree = "<group>"; };
+		346E7DBF24FC076800C9712D /* MainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		347A5C4324F7061900EDF0D2 /* MoneyWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyWidgetView.swift; sourceTree = "<group>"; };
 		347A5C5024F7170B00EDF0D2 /* Circe-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Regular.ttf"; sourceTree = "<group>"; };
 		347A5C5124F7170B00EDF0D2 /* Circe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Bold.ttf"; sourceTree = "<group>"; };
@@ -106,9 +108,7 @@
 		34D45E0B24FA77BA00A56152 /* MoneyHeaderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderPresenter.swift; sourceTree = "<group>"; };
 		3ADA2AC724F84FB800CB6E89 /* MainScreenViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewOutput.swift; sourceTree = "<group>"; };
 		3ADA2AC924F84FCC00CB6E89 /* MainScreenModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModuleOutput.swift; sourceTree = "<group>"; };
-		3ADA2ACB24F84FEF00CB6E89 /* MainScreenInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInput.swift; sourceTree = "<group>"; };
 		3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenConfigurator.swift; sourceTree = "<group>"; };
-		3AFCCB3324F7FA220083C773 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		3AFCCB3524F7FA450083C773 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
 		3AFCCB3824F810CE0083C773 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -277,6 +277,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		346E7DBD24FC076800C9712D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				346E7DBE24FC076800C9712D /* MainScreenInput.swift */,
+				346E7DBF24FC076800C9712D /* MainScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		347A5C4F24F7168100EDF0D2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,15 +358,6 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		3ADF305F24F8470800DE8045 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3ADA2ACB24F84FEF00CB6E89 /* MainScreenInput.swift */,
-				3AFCCB3324F7FA220083C773 /* MainScreenViewController.swift */,
-				);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		3ADF306024F8471000DE8045 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,7 +379,7 @@
 		3AFCCB3724F7FC0E0083C773 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3ADF305F24F8470800DE8045 /* View */,
+				346E7DBD24FC076800C9712D /* View */,
 				3ADF306024F8471000DE8045 /* Presenter */,
 				3ADF306124F8471500DE8045 /* Configurator */,
 			);
@@ -561,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34951AA724F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift in Sources */,
+				346E7DC124FC076800C9712D /* MainScreenViewController.swift in Sources */,
 				344E2A3C24F85A5000E9A24F /* MoneyPresenter.swift in Sources */,
 				346E7DAB24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift in Sources */,
 				34D45E0A24FA778900A56152 /* MoneyHeaderViewOutput.swift in Sources */,
@@ -585,11 +586,10 @@
 				34951AA924F99E7B002FF3C7 /* PaySystem.swift in Sources */,
 				340B083924F91E2F00F83766 /* CardInfo.swift in Sources */,
 				3ADF305E24F8427200DE8045 /* MainScreenConfigurator.swift in Sources */,
+				346E7DC024FC076800C9712D /* MainScreenInput.swift in Sources */,
 				3AFCCB3924F810CE0083C773 /* AppCoordinator.swift in Sources */,
 				3ADA2ACA24F84FCC00CB6E89 /* MainScreenModuleOutput.swift in Sources */,
 				3ADA2AC824F84FB800CB6E89 /* MainScreenViewOutput.swift in Sources */,
-				3ADA2ACC24F84FEF00CB6E89 /* MainScreenInput.swift in Sources */,
-				3AFCCB3424F7FA230083C773 /* MainScreenViewController.swift in Sources */,
 				3AFCCB3624F7FA450083C773 /* MainScreenPresenter.swift in Sources */,
 				341C7D3D24F40E6500C6EA9C /* AppDelegate.swift in Sources */,
 			);

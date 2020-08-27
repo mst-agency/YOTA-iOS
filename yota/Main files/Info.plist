@@ -23,8 +23,8 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIAppFonts</key>
-		<string>Circe-Regular.ttf</string>
 	<array>
+		<string>Circe-Regular.ttf</string>
 		<string>Circe-Bold.ttf</string>
 		<string>Circe-ExtraBold.ttf</string>
 	</array>
