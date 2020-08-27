@@ -112,6 +112,7 @@
 				341C7D3C24F40E6500C6EA9C /* AppDelegate.swift */,
 				341C7D3E24F40E6500C6EA9C /* SceneDelegate.swift */,
 				341C7D4024F40E6500C6EA9C /* ViewController.swift */,
+				344E2A3124F81E3D00E9A24F /* PresentationLayer */,
 				344E2A2C24F81C7600E9A24F /* Extensions */,
 				347A5C4F24F7168100EDF0D2 /* Fonts */,
 				341C7D4224F40E6500C6EA9C /* Main.storyboard */,
@@ -147,6 +148,53 @@
 				344E2A2F24F81DB900E9A24F /* UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		344E2A3124F81E3D00E9A24F /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				344E2A3524F81F8B00E9A24F /* UiElements */,
+				344E2A3324F81EB100E9A24F /* Widgets */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		344E2A3224F81EAB00E9A24F /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				344E2A4624F87B5A00E9A24F /* View */,
+				344E2A4324F87A5100E9A24F /* Presenter */,
+			);
+			path = Money;
+			sourceTree = "<group>";
+		};
+		344E2A3324F81EB100E9A24F /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				344E2A3224F81EAB00E9A24F /* Money */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		344E2A3524F81F8B00E9A24F /* UiElements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UiElements;
+			sourceTree = "<group>";
+		};
+		344E2A4324F87A5100E9A24F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		344E2A4624F87B5A00E9A24F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		347A5C4F24F7168100EDF0D2 /* Fonts */ = {
