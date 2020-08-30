@@ -25,6 +25,8 @@
 		344E2A3E24F878F300E9A24F /* MoneyModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A3D24F878F300E9A24F /* MoneyModuleProtocol.swift */; };
 		344E2A4024F87A1C00E9A24F /* MoneyModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A3F24F87A1C00E9A24F /* MoneyModuleInput.swift */; };
 		344E2A4224F87A3900E9A24F /* MoneyModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A4124F87A3900E9A24F /* MoneyModuleOutput.swift */; };
+		346A80A624FEF56A003841C7 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A80A524FEF56A003841C7 /* UIDevice.swift */; };
+		346A80A924FEF5B8003841C7 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A80A824FEF5B7003841C7 /* ScreenType.swift */; };
 		346E7DA924FBDD4000C9712D /* MoneyHeaderModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DA824FBDD4000C9712D /* MoneyHeaderModuleInput.swift */; };
 		346E7DAB24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DAA24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift */; };
 		346E7DC024FC076800C9712D /* MainScreenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DBE24FC076800C9712D /* MainScreenInput.swift */; };
@@ -90,6 +92,8 @@
 		344E2A3D24F878F300E9A24F /* MoneyModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModuleProtocol.swift; sourceTree = "<group>"; };
 		344E2A3F24F87A1C00E9A24F /* MoneyModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModuleInput.swift; sourceTree = "<group>"; };
 		344E2A4124F87A3900E9A24F /* MoneyModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModuleOutput.swift; sourceTree = "<group>"; };
+		346A80A524FEF56A003841C7 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		346A80A824FEF5B7003841C7 /* ScreenType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenType.swift; sourceTree = "<group>"; };
 		346E7DA824FBDD4000C9712D /* MoneyHeaderModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderModuleInput.swift; sourceTree = "<group>"; };
 		346E7DAA24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderModuleOutput.swift; sourceTree = "<group>"; };
 		346E7DBE24FC076800C9712D /* MainScreenInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenInput.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 		341C7D3B24F40E6500C6EA9C /* yota */ = {
 			isa = PBXGroup;
 			children = (
+				346A80A724FEF5B7003841C7 /* Helpers */,
 				34951A9E24F98C1D002FF3C7 /* Common */,
 				340B083724F91E0400F83766 /* Entities */,
 				34951AA524F9913E002FF3C7 /* BusinessLogicLayer */,
@@ -213,6 +218,7 @@
 		344E2A2C24F81C7600E9A24F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				346A80A524FEF56A003841C7 /* UIDevice.swift */,
 				344E2A2D24F81CD700E9A24F /* UIFont.swift */,
 				344E2A2F24F81DB900E9A24F /* UIColor.swift */,
 			);
@@ -275,6 +281,14 @@
 				340B083124F903D000F83766 /* MoneyWidgetViewOutput.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		346A80A724FEF5B7003841C7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				346A80A824FEF5B7003841C7 /* ScreenType.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		346E7DBD24FC076800C9712D /* View */ = {
@@ -563,6 +577,7 @@
 				34951AA724F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift in Sources */,
 				346E7DC124FC076800C9712D /* MainScreenViewController.swift in Sources */,
 				344E2A3C24F85A5000E9A24F /* MoneyPresenter.swift in Sources */,
+				346A80A924FEF5B8003841C7 /* ScreenType.swift in Sources */,
 				346E7DAB24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift in Sources */,
 				34D45E0A24FA778900A56152 /* MoneyHeaderViewOutput.swift in Sources */,
 				344E2A4024F87A1C00E9A24F /* MoneyModuleInput.swift in Sources */,
@@ -576,6 +591,7 @@
 				340B083224F903D000F83766 /* MoneyWidgetViewInput.swift in Sources */,
 				340B083324F903D000F83766 /* MoneyWidgetViewOutput.swift in Sources */,
 				344E2A2E24F81CD700E9A24F /* UIFont.swift in Sources */,
+				346A80A624FEF56A003841C7 /* UIDevice.swift in Sources */,
 				34951AA324F98CC6002FF3C7 /* AccountNumberFormatter.swift in Sources */,
 				344E2A4224F87A3900E9A24F /* MoneyModuleOutput.swift in Sources */,
 				340B083624F9076600F83766 /* MoneyModuleConfigurator.swift in Sources */,
