@@ -78,7 +78,7 @@ final class MoneyWidgetView: UIView {
     }
     
     private func setup() {
-        isHidden = true
+//        isHidden = true
         backgroundColor = UIColor.Money.background
         layer.cornerRadius = 8
         

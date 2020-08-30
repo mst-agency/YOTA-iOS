@@ -16,6 +16,8 @@ final class MoneyHeaderWidgetView: UIView {
     
     // MARK: - Properties (Private)
     
+    private var heightConstraint: NSLayoutConstraint?
+    
     private lazy var balanceTitle: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -70,40 +72,38 @@ final class MoneyHeaderWidgetView: UIView {
     private func setup() {
         backgroundColor = UIColor.Money.headerBackground
         
+//        clipsToBounds = false
+        clipsToBounds = true
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 10
+        layer.shadowColor = UIColor(red: 0.263, green: 0.298, blue: 0.369, alpha: 0.2).cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 4)
+        
         translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(cardInfo)
-        let cardInfoConstraints = [
-            cardInfo.topAnchor.constraint(equalTo: topAnchor, constant: 58),
-            cardInfo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            cardInfo.heightAnchor.constraint(equalToConstant: 28),
-            cardInfo.widthAnchor.constraint(equalToConstant: 96)
-        ]
-        
-        addSubview(balanceTitle)
-        let balanceTitleConstraints = [
-            balanceTitle.topAnchor.constraint(equalTo: topAnchor, constant: 64),
-            balanceTitle.trailingAnchor.constraint(equalTo: balance.leadingAnchor, constant: -4),
-            balanceTitle.heightAnchor.constraint(equalToConstant: 24),
-            balanceTitle.widthAnchor.constraint(equalToConstant: 50)
-        ]
+        NSLayoutConstraint.activate(
+            [cardInfo.topAnchor.constraint(equalTo: topAnchor, constant: 58),
+             cardInfo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+             cardInfo.heightAnchor.constraint(equalToConstant: 28),
+             cardInfo.widthAnchor.constraint(equalToConstant: 96)])
         
         addSubview(balance)
-        let balanceConstraints = [
-            balance.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            balance.topAnchor.constraint(equalTo: topAnchor, constant: 51),
-            balance.leadingAnchor.constraint(greaterThanOrEqualTo: cardInfo.trailingAnchor, constant: 66),
-            balance.heightAnchor.constraint(equalToConstant: 41)
-        ]
-        
         NSLayoutConstraint.activate(
-            Array(
-                [
-                    balanceTitleConstraints,
-                    cardInfoConstraints,
-                    balanceConstraints
-                ]
-                .joined()))
+            [balance.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+             balance.topAnchor.constraint(equalTo: topAnchor, constant: 51),
+             balance.leadingAnchor.constraint(greaterThanOrEqualTo: cardInfo.trailingAnchor, constant: 66),
+             balance.heightAnchor.constraint(equalToConstant: 41)])
+        
+        addSubview(balanceTitle)
+        NSLayoutConstraint.activate(
+            [balanceTitle.topAnchor.constraint(equalTo: topAnchor, constant: 64),
+             balanceTitle.trailingAnchor.constraint(equalTo: balance.leadingAnchor, constant: -4),
+             balanceTitle.heightAnchor.constraint(equalToConstant: 24),
+             balanceTitle.widthAnchor.constraint(equalToConstant: 50)])
+        
+        heightConstraint = heightAnchor.constraint(equalToConstant: 58)
+        heightConstraint?.isActive = true
     }
 }
 
@@ -111,7 +111,15 @@ final class MoneyHeaderWidgetView: UIView {
 
 extension MoneyHeaderWidgetView: MoneyHeaderViewInput {
     
-    func animate() {}
+    func scale(value: Double) {
+        let maxSize: Double = 107.0
+        guard 58 + value <= maxSize else { return }
+        
+        DispatchQueue.main.async {
+            self.heightConstraint?.constant = CGFloat(58 + value)
+            self.layoutIfNeeded()
+        }
+    }
     
     func refreshBalance(balance: NSAttributedString) {
         self.balance.attributedText = balance

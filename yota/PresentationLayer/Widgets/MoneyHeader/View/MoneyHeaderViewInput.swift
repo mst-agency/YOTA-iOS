@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MoneyHeaderViewInput: MoneyWidgetViewInput {
-    func animate()
+    func scale(value: Double)
 }
