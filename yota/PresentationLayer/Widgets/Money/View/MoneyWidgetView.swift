@@ -78,7 +78,6 @@ final class MoneyWidgetView: UIView {
     }
     
     private func setup() {
-//        isHidden = true
         backgroundColor = UIColor.Money.background
         layer.cornerRadius = 8
         
@@ -91,59 +90,42 @@ final class MoneyWidgetView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(mainTitle)
-        let mainTitleConstraints = [
-            mainTitle.topAnchor.constraint(equalTo: topAnchor, constant: 14),
-            mainTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
-            mainTitle.heightAnchor.constraint(equalToConstant: 24),
-            mainTitle.widthAnchor.constraint(equalToConstant: 64)
-        ]
+        NSLayoutConstraint.activate(
+            [
+                mainTitle.topAnchor.constraint(equalTo: topAnchor, constant: 14),
+                mainTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
+                mainTitle.heightAnchor.constraint(equalToConstant: 24),
+                mainTitle.widthAnchor.constraint(equalToConstant: 64)
+            ])
         
         addSubview(cardInfo)
-        let cardInfoConstraints = [
-            cardInfo.topAnchor.constraint(equalTo: topAnchor, constant: 9),
-            cardInfo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
-            cardInfo.heightAnchor.constraint(equalToConstant: 28),
-            cardInfo.widthAnchor.constraint(equalToConstant: 96)
-        ]
+        NSLayoutConstraint.activate(
+            [
+                cardInfo.topAnchor.constraint(equalTo: topAnchor, constant: 9),
+                cardInfo.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
+                cardInfo.heightAnchor.constraint(equalToConstant: 28),
+                cardInfo.widthAnchor.constraint(equalToConstant: 96)
+            ])
         
         addSubview(balanceTitle)
-        let balanceTitleConstraints = [
-            balanceTitle.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22),
-            balanceTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
-            balanceTitle.heightAnchor.constraint(equalToConstant: 24),
-            balanceTitle.widthAnchor.constraint(equalToConstant: 50)
-        ]
+        NSLayoutConstraint.activate(
+            [
+                balanceTitle.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -22),
+                balanceTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
+                balanceTitle.heightAnchor.constraint(equalToConstant: 24),
+                balanceTitle.widthAnchor.constraint(equalToConstant: 50)
+            ])
         
         addSubview(balance)
-        let balanceConstraints = [
-            balance.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
-            balance.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -17),
-            balance.leadingAnchor.constraint(greaterThanOrEqualTo: balanceTitle.trailingAnchor, constant: 40),
-            balance.heightAnchor.constraint(equalToConstant: 41)
-        ]
-        
         NSLayoutConstraint.activate(
-            Array(
-                [
-                    mainTitleConstraints,
-                    balanceTitleConstraints,
-                    cardInfoConstraints,
-                    balanceConstraints
-                ]
-                .joined()))
+            [
+                balance.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -14),
+                balance.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -17),
+                balance.leadingAnchor.constraint(greaterThanOrEqualTo: balanceTitle.trailingAnchor, constant: 40),
+                balance.heightAnchor.constraint(equalToConstant: 41)
+            ])
     }
 }
-
-// extension MoneyWidgetView: MoneyModuleProtocol {
-//
-//    var moduleInput: MoneyModuleInput {
-//        return output as! MoneyModuleInput
-//    }
-//
-//    var moduleOutput: MoneyModuleOutput {
-//        return output as! MoneyModuleOutput
-//    }
-// }
 
 // MARK: - MoneyWidgetViewInput
 

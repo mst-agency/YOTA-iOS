@@ -1,5 +1,5 @@
 //
-//  MoneyModuleInput.swift
+//  MoneyHeaderModuleOutput.swift
 //  yota
 //
 //  Created by Victor on 30.08.2020.
@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol MoneyHeaderModuleInput: class {
-//    func show()
-}
+protocol MoneyHeaderModuleOutput: class {}

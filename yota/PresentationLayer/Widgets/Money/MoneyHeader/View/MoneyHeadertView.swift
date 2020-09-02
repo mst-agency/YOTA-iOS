@@ -12,11 +12,22 @@ final class MoneyHeaderWidgetView: UIView {
     
     // MARK: - Properties (Public)
     
-    var output: MoneyWidgetViewOutput?
+    var output: MoneyHeaderViewOutput?
     
     // MARK: - Properties (Private)
     
     private var heightConstraint: NSLayoutConstraint?
+    
+    private var oldContentOffset = CGPoint.zero
+    private let minHeight: CGFloat = WidgetSize.moneyHeaderViewWidgetHeightRange().lowerBound
+    private let maxHeight: CGFloat = WidgetSize.moneyHeaderViewWidgetHeightRange().upperBound
+    
+    private lazy var mainView: UIView = {
+        let mainView = UIView(frame: frame)
+        mainView.translatesAutoresizingMaskIntoConstraints = false
+        mainView.backgroundColor = UIColor.Money.headerBackground
+        return mainView
+    }()
     
     private lazy var balanceTitle: UILabel = {
         let label = UILabel()
@@ -69,40 +80,59 @@ final class MoneyHeaderWidgetView: UIView {
         output?.tapCardInfoTriggered()
     }
     
+    private func shadowOff() {
+        layer.shadowOpacity = 0
+    }
+    
+    private func shadowOn() {
+        layer.shadowOpacity = 1
+    }
+    
     private func setup() {
         backgroundColor = UIColor.Money.headerBackground
         
-//        clipsToBounds = false
-        clipsToBounds = true
-        layer.shadowOpacity = 1
+        clipsToBounds = false
+        mainView.clipsToBounds = true
+        
+        layer.shadowOpacity = 0
         layer.shadowRadius = 10
         layer.shadowColor = UIColor(red: 0.263, green: 0.298, blue: 0.369, alpha: 0.2).cgColor
         layer.shadowOffset = CGSize(width: 0, height: 4)
-        
+      
         translatesAutoresizingMaskIntoConstraints = false
+       
+        addSubview(mainView)
+        NSLayoutConstraint.activate(
+            [
+                mainView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                mainView.topAnchor.constraint(equalTo: topAnchor),
+                mainView.trailingAnchor.constraint(equalTo: trailingAnchor),
+                mainView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
         
-        addSubview(cardInfo)
+        mainView.addSubview(cardInfo)
         NSLayoutConstraint.activate(
             [cardInfo.topAnchor.constraint(equalTo: topAnchor, constant: 58),
              cardInfo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
              cardInfo.heightAnchor.constraint(equalToConstant: 28),
              cardInfo.widthAnchor.constraint(equalToConstant: 96)])
         
-        addSubview(balance)
+        mainView.addSubview(balance)
         NSLayoutConstraint.activate(
             [balance.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
              balance.topAnchor.constraint(equalTo: topAnchor, constant: 51),
              balance.leadingAnchor.constraint(greaterThanOrEqualTo: cardInfo.trailingAnchor, constant: 66),
              balance.heightAnchor.constraint(equalToConstant: 41)])
         
-        addSubview(balanceTitle)
+        mainView.addSubview(balanceTitle)
         NSLayoutConstraint.activate(
             [balanceTitle.topAnchor.constraint(equalTo: topAnchor, constant: 64),
              balanceTitle.trailingAnchor.constraint(equalTo: balance.leadingAnchor, constant: -4),
              balanceTitle.heightAnchor.constraint(equalToConstant: 24),
              balanceTitle.widthAnchor.constraint(equalToConstant: 50)])
         
-        heightConstraint = heightAnchor.constraint(equalToConstant: 58)
+        heightConstraint = heightAnchor.constraint(equalToConstant: minHeight)
+        
         heightConstraint?.isActive = true
     }
 }
@@ -111,14 +141,38 @@ final class MoneyHeaderWidgetView: UIView {
 
 extension MoneyHeaderWidgetView: MoneyHeaderViewInput {
     
-    func scale(value: Double) {
-        let maxSize: Double = 107.0
-        guard 58 + value <= maxSize else { return }
+    func didScroll(scrollView: UIScrollView) {
+        guard let heightConstraint = self.heightConstraint else { return }
         
-        DispatchQueue.main.async {
-            self.heightConstraint?.constant = CGFloat(58 + value)
-            self.layoutIfNeeded()
+        let contentOffset =  scrollView.contentOffset.y - oldContentOffset.y
+        
+        if contentOffset > 0 && scrollView.contentOffset.y > -minHeight {
+            if heightConstraint.constant <= maxHeight {
+                if heightConstraint.constant + contentOffset <= maxHeight {
+                    heightConstraint.constant += contentOffset
+                    shadowOn()
+                } else {
+                    heightConstraint.constant = maxHeight
+                }
+            }
         }
+        
+        if contentOffset < 0 && scrollView.contentOffset.y <= -minHeight + maxHeight - minHeight {
+            if heightConstraint.constant > minHeight {
+                if heightConstraint.constant + contentOffset >= minHeight {
+                    heightConstraint.constant += contentOffset
+                } else {
+                    heightConstraint.constant = minHeight
+                }
+            
+            }
+        }
+        
+        if heightConstraint.constant == minHeight {
+             shadowOff()
+        }
+
+        oldContentOffset = scrollView.contentOffset
     }
     
     func refreshBalance(balance: NSAttributedString) {

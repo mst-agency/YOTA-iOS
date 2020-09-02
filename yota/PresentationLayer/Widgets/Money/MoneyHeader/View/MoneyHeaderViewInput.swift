@@ -6,8 +6,10 @@
 //  Copyright © 2020 MST. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol MoneyHeaderViewInput: MoneyWidgetViewInput {
-    func scale(value: Double)
+    
+    /// Метод управляет MoneyHeaderView при прокрутке по вертикали.
+    func didScroll(scrollView: UIScrollView)
 }

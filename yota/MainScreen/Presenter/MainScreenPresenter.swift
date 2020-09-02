@@ -6,15 +6,14 @@
 //  Copyright © 2020 MST. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class MainScreenPresenter {
 
     // MARK: - Property list
 
     var view: MainScreenInput?
-//    private var cellModels
-
+    private var widgets: [String] = [MoneyWidgetCell.reuseID, InAppCell.reuseID]
 }
 
 // MARK: MainScreenModuleOutput
@@ -24,12 +23,28 @@ extension MainScreenPresenter: MainScreenModuleOutput { }
 // MARK: - MainScreenViewOutput
 
 extension MainScreenPresenter: MainScreenViewOutput {
-
-    func viewDidLoad() {
-        return
+    func didTriggerGetNumberOfRows() -> Int {
+        widgets.count
     }
-
-    func getNumberOfRows() -> Int {
-        return 0
+    
+    func didTriggerGetWidgetCell(index: Int, tableView: UITableView) -> UITableViewCell {
+        switch widgets[index] {
+        case MoneyWidgetCell.reuseID:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MoneyWidgetCell.reuseID) as? MoneyWidgetCell else { fatalError("Wrong cell") }
+            return cell
+        case InAppCell.reuseID:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: InAppCell.reuseID) as? InAppCell else { fatalError("Wrong cell") }
+            return cell
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    func didTriggerGetWidgetSize(index: Int) -> CGFloat {
+        WidgetSize.widgetSize(widgetReuseID: widgets[index]).height
+    }
+    
+    func didTriggerViewDidLoad() {
+        return
     }
 }

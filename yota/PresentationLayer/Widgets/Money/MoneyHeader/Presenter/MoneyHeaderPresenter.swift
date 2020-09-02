@@ -8,11 +8,11 @@
 
 import Foundation
 
-final class MoneyHeaderPresenter: MoneyHeaderModuleInput, MoneyHeaderModuleOutput {
+final class MoneyHeaderPresenter {
 
     // MARK: - Properties (Public)
 
-    weak var view: MoneyWidgetViewInput?
+    weak var view: MoneyHeaderViewInput?
 
     // MARK: - Properties (Private)
 
@@ -21,16 +21,24 @@ final class MoneyHeaderPresenter: MoneyHeaderModuleInput, MoneyHeaderModuleOutpu
 
     // MARK: - Initializers (Public)
 
-    init(getCustomerAccountDataUseCase: GetCustomerAccountDataUseCase, view: MoneyWidgetViewInput) {
+    init(getCustomerAccountDataUseCase: GetCustomerAccountDataUseCase, view: MoneyHeaderViewInput) {
         self.getCustomerAccountDataUseCase = getCustomerAccountDataUseCase
         self.view = view
         self.cardInfo = nil
     }
 }
 
+// MARK: - MoneyHeaderModuleInput
+
+extension MoneyHeaderPresenter: MoneyHeaderModuleInput {}
+
+// MARK: - MoneyHeaderModuleOutput
+
+extension MoneyHeaderPresenter: MoneyHeaderModuleOutput {}
+
 // MARK: - MoneyWidgetViewOutput
 
-extension MoneyHeaderPresenter: MoneyWidgetViewOutput {
+extension MoneyHeaderPresenter: MoneyHeaderViewOutput {
 
     func viewIsReady() {
         cardInfo = getCustomerAccountDataUseCase.getData()

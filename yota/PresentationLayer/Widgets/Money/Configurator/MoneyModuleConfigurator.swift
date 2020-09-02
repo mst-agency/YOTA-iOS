@@ -10,17 +10,18 @@ import Foundation
 
 class MoneyModuleConfigurator {
 
-    /// Метод конфигурирует виджет "деньги" который состоит из самого виджета и хедера.
+    /// Метод конфигурирует виджет "деньги" или хедер "деньги".
     /// - Parameters:
     ///   - viewInput: view виджета.
-    ///   - headerViewInput: view хедера.
-    func configureModuleForViewInput<UIView>(viewInput: UIView, headerViewInput: UIView) {
-        if let view = viewInput as? MoneyWidgetView, let headerView = headerViewInput as? MoneyHeaderWidgetView {
-            configure(view: view, headerView: headerView)
+    func configureModuleForViewInput<UIView>(viewInput: UIView) {
+        if let view = viewInput as? MoneyWidgetView {
+            configure(view: view)
+        } else if let view = viewInput as? MoneyHeaderWidgetView {
+            configure(view: view)
         }
     }
-
-    private func configure(view: MoneyWidgetView, headerView: MoneyHeaderWidgetView) {
+    
+    private func configure(view: MoneyWidgetView) {
         let getCustomerAccountDataUseCaseImp = GetCustomerAccountDataUseCaseImp()
         let presenter = MoneyPresenter(
             getCustomerAccountDataUseCase: getCustomerAccountDataUseCaseImp,
@@ -29,10 +30,16 @@ class MoneyModuleConfigurator {
         presenter.view = view
         view.output = presenter
         view.output?.viewIsReady()
+    }
+    
+    private func configure(view: MoneyHeaderWidgetView) {
+        let getCustomerAccountDataUseCaseImp = GetCustomerAccountDataUseCaseImp()
+        let presenter = MoneyHeaderPresenter(
+            getCustomerAccountDataUseCase: getCustomerAccountDataUseCaseImp,
+            view: view)
 
-        let headerPresenter = MoneyHeaderPresenter(getCustomerAccountDataUseCase: getCustomerAccountDataUseCaseImp, view: headerView)
-        headerPresenter.view = headerView
-        headerView.output = headerPresenter
-        headerView.output?.viewIsReady()
+        presenter.view = view
+        view.output = presenter
+        view.output?.viewIsReady()
     }
 }

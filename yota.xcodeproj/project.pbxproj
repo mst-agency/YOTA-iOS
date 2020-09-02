@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34017B9C24FD811E00AD15A5 /* InAppModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017B9B24FD811E00AD15A5 /* InAppModuleConfigurator.swift */; };
+		34017B9E24FD815B00AD15A5 /* InAppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017B9D24FD815B00AD15A5 /* InAppPresenter.swift */; };
+		34017BA024FD819C00AD15A5 /* InAppWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017B9F24FD819C00AD15A5 /* InAppWidgetView.swift */; };
+		34017BA224FD81B200AD15A5 /* InAppWidgetViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017BA124FD81B200AD15A5 /* InAppWidgetViewOutput.swift */; };
+		34017BA424FD81D400AD15A5 /* InAppWidgetViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017BA324FD81D400AD15A5 /* InAppWidgetViewInput.swift */; };
+		34017BA624FD83DE00AD15A5 /* GetCustomerNotificationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017BA524FD83DE00AD15A5 /* GetCustomerNotificationsUseCase.swift */; };
+		34017BA824FD84EC00AD15A5 /* InAppNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017BA724FD84EC00AD15A5 /* InAppNotification.swift */; };
+		34017BAA24FD856B00AD15A5 /* DisplayCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017BA924FD856B00AD15A5 /* DisplayCondition.swift */; };
+		34017BAC24FD85F900AD15A5 /* HideCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017BAB24FD85F900AD15A5 /* HideCondition.swift */; };
 		340B083224F903D000F83766 /* MoneyWidgetViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B083024F903D000F83766 /* MoneyWidgetViewInput.swift */; };
 		340B083324F903D000F83766 /* MoneyWidgetViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B083124F903D000F83766 /* MoneyWidgetViewOutput.swift */; };
 		340B083624F9076600F83766 /* MoneyModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340B083524F9076600F83766 /* MoneyModuleConfigurator.swift */; };
@@ -22,11 +31,11 @@
 		344E2A3024F81DB900E9A24F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A2F24F81DB900E9A24F /* UIColor.swift */; };
 		344E2A3924F83BF300E9A24F /* PaySystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A3824F83BF300E9A24F /* PaySystemView.swift */; };
 		344E2A3C24F85A5000E9A24F /* MoneyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A3B24F85A5000E9A24F /* MoneyPresenter.swift */; };
-		344E2A3E24F878F300E9A24F /* MoneyModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A3D24F878F300E9A24F /* MoneyModuleProtocol.swift */; };
 		344E2A4024F87A1C00E9A24F /* MoneyModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A3F24F87A1C00E9A24F /* MoneyModuleInput.swift */; };
 		344E2A4224F87A3900E9A24F /* MoneyModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A4124F87A3900E9A24F /* MoneyModuleOutput.swift */; };
 		346A80A624FEF56A003841C7 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A80A524FEF56A003841C7 /* UIDevice.swift */; };
 		346A80A924FEF5B8003841C7 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A80A824FEF5B7003841C7 /* ScreenType.swift */; };
+		346A80AC24FF03B2003841C7 /* MoneyWidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346A80AB24FF03B2003841C7 /* MoneyWidgetCell.swift */; };
 		346E7DA924FBDD4000C9712D /* MoneyHeaderModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DA824FBDD4000C9712D /* MoneyHeaderModuleInput.swift */; };
 		346E7DAB24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DAA24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift */; };
 		346E7DC024FC076800C9712D /* MainScreenInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E7DBE24FC076800C9712D /* MainScreenInput.swift */; };
@@ -35,10 +44,14 @@
 		347A5C5324F7170B00EDF0D2 /* Circe-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5024F7170B00EDF0D2 /* Circe-Regular.ttf */; };
 		347A5C5424F7170B00EDF0D2 /* Circe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5124F7170B00EDF0D2 /* Circe-Bold.ttf */; };
 		347A5C5524F7170B00EDF0D2 /* Circe-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5224F7170B00EDF0D2 /* Circe-ExtraBold.ttf */; };
+		348925412500477B00035351 /* InAppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348925402500477B00035351 /* InAppCollectionViewCell.swift */; };
+		3489254325004B5300035351 /* InAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254225004B5300035351 /* InAppCell.swift */; };
+		3489254525004CBF00035351 /* InAppCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254425004CBF00035351 /* InAppCollectionView.swift */; };
 		34951AA124F98C52002FF3C7 /* BalanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34951AA024F98C52002FF3C7 /* BalanceFormatter.swift */; };
 		34951AA324F98CC6002FF3C7 /* AccountNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34951AA224F98CC6002FF3C7 /* AccountNumberFormatter.swift */; };
 		34951AA724F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34951AA624F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift */; };
 		34951AA924F99E7B002FF3C7 /* PaySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34951AA824F99E7B002FF3C7 /* PaySystem.swift */; };
+		34AA801325016F9D00BBDB53 /* WidgetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA801225016F9D00BBDB53 /* WidgetSize.swift */; };
 		34D45E0324FA750600A56152 /* MoneyHeadertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0224FA750600A56152 /* MoneyHeadertView.swift */; };
 		34D45E0824FA76F900A56152 /* MoneyHeaderViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */; };
 		34D45E0A24FA778900A56152 /* MoneyHeaderViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0924FA778900A56152 /* MoneyHeaderViewOutput.swift */; };
@@ -68,6 +81,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34017B9B24FD811E00AD15A5 /* InAppModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppModuleConfigurator.swift; sourceTree = "<group>"; };
+		34017B9D24FD815B00AD15A5 /* InAppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPresenter.swift; sourceTree = "<group>"; };
+		34017B9F24FD819C00AD15A5 /* InAppWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWidgetView.swift; sourceTree = "<group>"; };
+		34017BA124FD81B200AD15A5 /* InAppWidgetViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWidgetViewOutput.swift; sourceTree = "<group>"; };
+		34017BA324FD81D400AD15A5 /* InAppWidgetViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWidgetViewInput.swift; sourceTree = "<group>"; };
+		34017BA524FD83DE00AD15A5 /* GetCustomerNotificationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerNotificationsUseCase.swift; sourceTree = "<group>"; };
+		34017BA724FD84EC00AD15A5 /* InAppNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppNotification.swift; sourceTree = "<group>"; };
+		34017BA924FD856B00AD15A5 /* DisplayCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayCondition.swift; sourceTree = "<group>"; };
+		34017BAB24FD85F900AD15A5 /* HideCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideCondition.swift; sourceTree = "<group>"; };
 		340B083024F903D000F83766 /* MoneyWidgetViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyWidgetViewInput.swift; sourceTree = "<group>"; };
 		340B083124F903D000F83766 /* MoneyWidgetViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyWidgetViewOutput.swift; sourceTree = "<group>"; };
 		340B083524F9076600F83766 /* MoneyModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModuleConfigurator.swift; sourceTree = "<group>"; };
@@ -89,11 +111,11 @@
 		344E2A2F24F81DB900E9A24F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		344E2A3824F83BF300E9A24F /* PaySystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaySystemView.swift; sourceTree = "<group>"; };
 		344E2A3B24F85A5000E9A24F /* MoneyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyPresenter.swift; sourceTree = "<group>"; };
-		344E2A3D24F878F300E9A24F /* MoneyModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModuleProtocol.swift; sourceTree = "<group>"; };
 		344E2A3F24F87A1C00E9A24F /* MoneyModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModuleInput.swift; sourceTree = "<group>"; };
 		344E2A4124F87A3900E9A24F /* MoneyModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModuleOutput.swift; sourceTree = "<group>"; };
 		346A80A524FEF56A003841C7 /* UIDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		346A80A824FEF5B7003841C7 /* ScreenType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenType.swift; sourceTree = "<group>"; };
+		346A80AB24FF03B2003841C7 /* MoneyWidgetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyWidgetCell.swift; sourceTree = "<group>"; };
 		346E7DA824FBDD4000C9712D /* MoneyHeaderModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderModuleInput.swift; sourceTree = "<group>"; };
 		346E7DAA24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderModuleOutput.swift; sourceTree = "<group>"; };
 		346E7DBE24FC076800C9712D /* MainScreenInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenInput.swift; sourceTree = "<group>"; };
@@ -102,10 +124,14 @@
 		347A5C5024F7170B00EDF0D2 /* Circe-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Regular.ttf"; sourceTree = "<group>"; };
 		347A5C5124F7170B00EDF0D2 /* Circe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Bold.ttf"; sourceTree = "<group>"; };
 		347A5C5224F7170B00EDF0D2 /* Circe-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraBold.ttf"; sourceTree = "<group>"; };
+		348925402500477B00035351 /* InAppCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCollectionViewCell.swift; sourceTree = "<group>"; };
+		3489254225004B5300035351 /* InAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCell.swift; sourceTree = "<group>"; };
+		3489254425004CBF00035351 /* InAppCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppCollectionView.swift; sourceTree = "<group>"; };
 		34951AA024F98C52002FF3C7 /* BalanceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceFormatter.swift; sourceTree = "<group>"; };
 		34951AA224F98CC6002FF3C7 /* AccountNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNumberFormatter.swift; sourceTree = "<group>"; };
 		34951AA624F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerAccountDataUseCase.swift; sourceTree = "<group>"; };
 		34951AA824F99E7B002FF3C7 /* PaySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaySystem.swift; sourceTree = "<group>"; };
+		34AA801225016F9D00BBDB53 /* WidgetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSize.swift; sourceTree = "<group>"; };
 		34D45E0224FA750600A56152 /* MoneyHeadertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeadertView.swift; sourceTree = "<group>"; };
 		34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderViewInput.swift; sourceTree = "<group>"; };
 		34D45E0924FA778900A56152 /* MoneyHeaderViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderViewOutput.swift; sourceTree = "<group>"; };
@@ -142,6 +168,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34017B9724FD806200AD15A5 /* InApp */ = {
+			isa = PBXGroup;
+			children = (
+				34017B9824FD80B100AD15A5 /* View */,
+				34017B9924FD80B600AD15A5 /* Presenter */,
+				34017B9A24FD80BD00AD15A5 /* Configurator */,
+			);
+			path = InApp;
+			sourceTree = "<group>";
+		};
+		34017B9824FD80B100AD15A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				34017B9F24FD819C00AD15A5 /* InAppWidgetView.swift */,
+				34017BA124FD81B200AD15A5 /* InAppWidgetViewOutput.swift */,
+				34017BA324FD81D400AD15A5 /* InAppWidgetViewInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		34017B9924FD80B600AD15A5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				34017B9D24FD815B00AD15A5 /* InAppPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		34017B9A24FD80BD00AD15A5 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				34017B9B24FD811E00AD15A5 /* InAppModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		34017BAD24FD8CD500AD15A5 /* inApp */ = {
+			isa = PBXGroup;
+			children = (
+				34017BA724FD84EC00AD15A5 /* InAppNotification.swift */,
+				34017BA924FD856B00AD15A5 /* DisplayCondition.swift */,
+				34017BAB24FD85F900AD15A5 /* HideCondition.swift */,
+			);
+			path = inApp;
+			sourceTree = "<group>";
+		};
+		34017BAE24FD8CE500AD15A5 /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				340B083824F91E2F00F83766 /* CardInfo.swift */,
+				340B083C24F91FCD00F83766 /* Currency.swift */,
+				34951AA824F99E7B002FF3C7 /* PaySystem.swift */,
+			);
+			path = Money;
+			sourceTree = "<group>";
+		};
 		340B083424F9074A00F83766 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,9 +235,8 @@
 		340B083724F91E0400F83766 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				340B083824F91E2F00F83766 /* CardInfo.swift */,
-				340B083C24F91FCD00F83766 /* Currency.swift */,
-				34951AA824F99E7B002FF3C7 /* PaySystem.swift */,
+				34017BAE24FD8CE500AD15A5 /* Money */,
+				34017BAD24FD8CD500AD15A5 /* inApp */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -229,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				344E2A3524F81F8B00E9A24F /* UiElements */,
+				346A80AA24FF039A003841C7 /* Cells */,
 				344E2A3324F81EB100E9A24F /* Widgets */,
 			);
 			path = PresentationLayer;
@@ -237,6 +319,7 @@
 		344E2A3224F81EAB00E9A24F /* Money */ = {
 			isa = PBXGroup;
 			children = (
+				34D45E0424FA767A00A56152 /* MoneyHeader */,
 				344E2A4624F87B5A00E9A24F /* View */,
 				344E2A4324F87A5100E9A24F /* Presenter */,
 				340B083424F9074A00F83766 /* Configurator */,
@@ -247,7 +330,7 @@
 		344E2A3324F81EB100E9A24F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				34D45E0424FA767A00A56152 /* MoneyHeader */,
+				34017B9724FD806200AD15A5 /* InApp */,
 				344E2A3224F81EAB00E9A24F /* Money */,
 			);
 			path = Widgets;
@@ -268,7 +351,6 @@
 				344E2A3B24F85A5000E9A24F /* MoneyPresenter.swift */,
 				344E2A3F24F87A1C00E9A24F /* MoneyModuleInput.swift */,
 				344E2A4124F87A3900E9A24F /* MoneyModuleOutput.swift */,
-				344E2A3D24F878F300E9A24F /* MoneyModuleProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -287,8 +369,19 @@
 			isa = PBXGroup;
 			children = (
 				346A80A824FEF5B7003841C7 /* ScreenType.swift */,
+				34AA801225016F9D00BBDB53 /* WidgetSize.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		346A80AA24FF039A003841C7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				346A80AB24FF03B2003841C7 /* MoneyWidgetCell.swift */,
+				3489254225004B5300035351 /* InAppCell.swift */,
+				3489253F2500474100035351 /* InAppCollectionView */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		346E7DBD24FC076800C9712D /* View */ = {
@@ -308,6 +401,15 @@
 				347A5C5024F7170B00EDF0D2 /* Circe-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3489253F2500474100035351 /* InAppCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3489254425004CBF00035351 /* InAppCollectionView.swift */,
+				348925402500477B00035351 /* InAppCollectionViewCell.swift */,
+			);
+			path = InAppCollectionView;
 			sourceTree = "<group>";
 		};
 		34951A9E24F98C1D002FF3C7 /* Common */ = {
@@ -331,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				34951AA624F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift */,
+				34017BA524FD83DE00AD15A5 /* GetCustomerNotificationsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -575,34 +678,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				34951AA724F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift in Sources */,
+				34017B9E24FD815B00AD15A5 /* InAppPresenter.swift in Sources */,
 				346E7DC124FC076800C9712D /* MainScreenViewController.swift in Sources */,
 				344E2A3C24F85A5000E9A24F /* MoneyPresenter.swift in Sources */,
 				346A80A924FEF5B8003841C7 /* ScreenType.swift in Sources */,
 				346E7DAB24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift in Sources */,
 				34D45E0A24FA778900A56152 /* MoneyHeaderViewOutput.swift in Sources */,
+				34017BA224FD81B200AD15A5 /* InAppWidgetViewOutput.swift in Sources */,
 				344E2A4024F87A1C00E9A24F /* MoneyModuleInput.swift in Sources */,
+				34017BA024FD819C00AD15A5 /* InAppWidgetView.swift in Sources */,
+				3489254525004CBF00035351 /* InAppCollectionView.swift in Sources */,
+				34017BA624FD83DE00AD15A5 /* GetCustomerNotificationsUseCase.swift in Sources */,
 				346E7DA924FBDD4000C9712D /* MoneyHeaderModuleInput.swift in Sources */,
 				344E2A3924F83BF300E9A24F /* PaySystemView.swift in Sources */,
 				344E2A3024F81DB900E9A24F /* UIColor.swift in Sources */,
 				34951AA124F98C52002FF3C7 /* BalanceFormatter.swift in Sources */,
-				344E2A3E24F878F300E9A24F /* MoneyModuleProtocol.swift in Sources */,
+				34017BAA24FD856B00AD15A5 /* DisplayCondition.swift in Sources */,
 				347A5C4424F7061900EDF0D2 /* MoneyWidgetView.swift in Sources */,
 				34D45E0824FA76F900A56152 /* MoneyHeaderViewInput.swift in Sources */,
 				340B083224F903D000F83766 /* MoneyWidgetViewInput.swift in Sources */,
+				34017B9C24FD811E00AD15A5 /* InAppModuleConfigurator.swift in Sources */,
 				340B083324F903D000F83766 /* MoneyWidgetViewOutput.swift in Sources */,
 				344E2A2E24F81CD700E9A24F /* UIFont.swift in Sources */,
 				346A80A624FEF56A003841C7 /* UIDevice.swift in Sources */,
+				346A80AC24FF03B2003841C7 /* MoneyWidgetCell.swift in Sources */,
+				3489254325004B5300035351 /* InAppCell.swift in Sources */,
 				34951AA324F98CC6002FF3C7 /* AccountNumberFormatter.swift in Sources */,
 				344E2A4224F87A3900E9A24F /* MoneyModuleOutput.swift in Sources */,
+				34017BA824FD84EC00AD15A5 /* InAppNotification.swift in Sources */,
 				340B083624F9076600F83766 /* MoneyModuleConfigurator.swift in Sources */,
 				340B083D24F91FCD00F83766 /* Currency.swift in Sources */,
 				34D45E0C24FA77BA00A56152 /* MoneyHeaderPresenter.swift in Sources */,
 				340B083B24F91EAA00F83766 /* CardInfoView.swift in Sources */,
+				34AA801325016F9D00BBDB53 /* WidgetSize.swift in Sources */,
 				34D45E0324FA750600A56152 /* MoneyHeadertView.swift in Sources */,
 				34951AA924F99E7B002FF3C7 /* PaySystem.swift in Sources */,
 				340B083924F91E2F00F83766 /* CardInfo.swift in Sources */,
 				3ADF305E24F8427200DE8045 /* MainScreenConfigurator.swift in Sources */,
+				348925412500477B00035351 /* InAppCollectionViewCell.swift in Sources */,
 				346E7DC024FC076800C9712D /* MainScreenInput.swift in Sources */,
+				34017BAC24FD85F900AD15A5 /* HideCondition.swift in Sources */,
+				34017BA424FD81D400AD15A5 /* InAppWidgetViewInput.swift in Sources */,
 				3AFCCB3924F810CE0083C773 /* AppCoordinator.swift in Sources */,
 				3ADA2ACA24F84FCC00CB6E89 /* MainScreenModuleOutput.swift in Sources */,
 				3ADA2AC824F84FB800CB6E89 /* MainScreenViewOutput.swift in Sources */,

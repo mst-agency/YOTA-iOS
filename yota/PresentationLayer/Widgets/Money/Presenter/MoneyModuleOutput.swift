@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol MoneyModuleOutput: class {
-//    var onFailWithError: ((ErrorInfo) -> Void)? { get set }
-}
+protocol MoneyModuleOutput: class {}

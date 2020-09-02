@@ -6,6 +6,11 @@
 //  Copyright © 2020 MST. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol MainScreenViewOutput { }
+protocol MainScreenViewOutput {
+    func didTriggerGetNumberOfRows() -> Int
+    func didTriggerGetWidgetCell(index: Int, tableView: UITableView) -> UITableViewCell
+    func didTriggerGetWidgetSize(index: Int) -> CGFloat
+    func didTriggerViewDidLoad()
+}
