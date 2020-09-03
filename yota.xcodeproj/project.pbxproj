@@ -56,6 +56,7 @@
 		34D45E0824FA76F900A56152 /* MoneyHeaderViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */; };
 		34D45E0A24FA778900A56152 /* MoneyHeaderViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0924FA778900A56152 /* MoneyHeaderViewOutput.swift */; };
 		34D45E0C24FA77BA00A56152 /* MoneyHeaderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0B24FA77BA00A56152 /* MoneyHeaderPresenter.swift */; };
+		34FDC56B2503EC830051783F /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FDC56A2503EC830051783F /* GradientLabel.swift */; };
 		3ADA2AC824F84FB800CB6E89 /* MainScreenViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2AC724F84FB800CB6E89 /* MainScreenViewOutput.swift */; };
 		3ADA2ACA24F84FCC00CB6E89 /* MainScreenModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2AC924F84FCC00CB6E89 /* MainScreenModuleOutput.swift */; };
 		3ADF305E24F8427200DE8045 /* MainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */; };
@@ -136,6 +137,7 @@
 		34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderViewInput.swift; sourceTree = "<group>"; };
 		34D45E0924FA778900A56152 /* MoneyHeaderViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderViewOutput.swift; sourceTree = "<group>"; };
 		34D45E0B24FA77BA00A56152 /* MoneyHeaderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderPresenter.swift; sourceTree = "<group>"; };
+		34FDC56A2503EC830051783F /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		3ADA2AC724F84FB800CB6E89 /* MainScreenViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewOutput.swift; sourceTree = "<group>"; };
 		3ADA2AC924F84FCC00CB6E89 /* MainScreenModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModuleOutput.swift; sourceTree = "<group>"; };
 		3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenConfigurator.swift; sourceTree = "<group>"; };
@@ -475,6 +477,22 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		34FDC5682503EC830051783F /* ConnectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				34FDC5692503EC830051783F /* Views */,
+			);
+			path = ConnectionCell;
+			sourceTree = "<group>";
+		};
+		34FDC5692503EC830051783F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34FDC56A2503EC830051783F /* GradientLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3ADF306024F8471000DE8045 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +514,7 @@
 		3AFCCB3724F7FC0E0083C773 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				34FDC5682503EC830051783F /* ConnectionCell */,
 				346E7DBD24FC076800C9712D /* View */,
 				3ADF306024F8471000DE8045 /* Presenter */,
 				3ADF306124F8471500DE8045 /* Configurator */,
@@ -705,6 +724,7 @@
 				3489254325004B5300035351 /* InAppCell.swift in Sources */,
 				34951AA324F98CC6002FF3C7 /* AccountNumberFormatter.swift in Sources */,
 				344E2A4224F87A3900E9A24F /* MoneyModuleOutput.swift in Sources */,
+				34FDC56B2503EC830051783F /* GradientLabel.swift in Sources */,
 				34017BA824FD84EC00AD15A5 /* InAppNotification.swift in Sources */,
 				340B083624F9076600F83766 /* MoneyModuleConfigurator.swift in Sources */,
 				340B083D24F91FCD00F83766 /* Currency.swift in Sources */,
