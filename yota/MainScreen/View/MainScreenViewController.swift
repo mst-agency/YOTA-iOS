@@ -11,7 +11,7 @@ import UIKit
 final class MainScreenViewController: UIViewController {
 
     // MARK: - Property list
-    
+
     private let presenter: MainScreenViewOutput
 
     private let tableView = UITableView()
@@ -34,6 +34,7 @@ final class MainScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+
         setupTableView()
         setupHeaderView()
     }
@@ -47,6 +48,7 @@ final class MainScreenViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+        tableView.register(ConnectionCell.self, forCellReuseIdentifier: ConnectionCell.reuseID)
         tableView.allowsSelection = false
         let moneyHeaderHeight = WidgetSize.moneyHeaderViewWidgetHeightRange().lowerBound
         tableView.contentInset = UIEdgeInsets(top: moneyHeaderHeight, left: 0, bottom: 0, right: 0)
@@ -88,6 +90,14 @@ extension MainScreenViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch presenter.getCellPresenter(at: indexPath) {
+        case let cellPresenter as ConnectionCellPresenter:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConnectionCell.reuseID) as? ConnectionCell else { fallthrough }
+
+            cellPresenter.cell = cell
+            cell.presenter = cellPresenter
+            return cell
+        default: return UITableViewCell()
 
         let widgetReuseID = presenter.didTriggerGetWidgetCellReuseID(index: indexPath.row)
         

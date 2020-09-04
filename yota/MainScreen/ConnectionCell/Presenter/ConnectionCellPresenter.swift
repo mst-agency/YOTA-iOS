@@ -12,11 +12,17 @@ final class ConnectionCellPresenter {
 
     // MARK: - Property list
 
-    weak var view: ConnectionCellInput?
+    weak var cell: ConnectionCellInput?
 }
 
 // MARK: - ConnectionCellOutput
 
 extension ConnectionCellPresenter: ConnectionCellOutput {
-    
+    func configure() {
+        cell?.setInlimitedAppsViewText("Безлимитные мобильные приложения", and: ["fb.png", "insta.png", "ok.png"])
+        cell?.setPriceDescriptionLabelText("Стоимость за 30 дней", price: "360 ₽")
+        cell?.setConnectionAndNumberViewText(connectionLabelText: "СВЯЗЬ", numberLabelText: "+7 999 532-23-89")
+    }
 }
+
+extension ConnectionCellPresenter: CellPresenter { }

@@ -24,7 +24,11 @@ extension MainScreenPresenter: MainScreenModuleOutput { }
 
 extension MainScreenPresenter: MainScreenViewOutput {
     func viewDidLoad() {
-        return
+
+        let connectionCellPresenter = ConnectionCellPresenter()
+        cellPresenters.append(connectionCellPresenter)
+
+        view?.reloadTable()
     }
     
     func getNumberOfRows() -> Int {

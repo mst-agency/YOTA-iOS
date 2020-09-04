@@ -26,6 +26,14 @@ final class PriceView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    func setPriceDescriptionLabelText(_ text: String) {
+        priceDescriptionLabel.text = text
+    }
+
+    func setPriceLabelText(_ text: String) {
+        priceLabel.text = text
+    }
     
     // MARK: - Private methods
 
@@ -135,6 +143,12 @@ final class PriceView: UIView {
         ])
     }
 
+    private func setupColors() {
+        priceDescriptionLabel.textColor = UIColor.Money.title
+        priceLabel.textColor = UIColor.Money.title
+        separatorView.backgroundColor = UIColor.Connection.separatorColor
+    }
+
     private func setup() {
         [priceDescriptionLabel, priceLabel, separatorView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -148,5 +162,7 @@ final class PriceView: UIView {
         case .iphone5: setupForIPhone5()
         case .ipad: setupForIPad()
         }
+
+        setupColors()
     }
 }

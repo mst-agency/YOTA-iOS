@@ -12,7 +12,7 @@ final class ConnectionLabelAndNumberView: UIView {
 
     // MARK: - Property list
 
-    private let connectionLabel = UILabel()
+    private let connectionLabel = GradientLabel()
     private let numberView = UIView()
     private let numberLabel = UILabel()
 
@@ -31,11 +31,9 @@ final class ConnectionLabelAndNumberView: UIView {
     
     // MARK: - Internal methods
 
-    func setText(_ connectionLabelText: String, numberLabelText: String) {
+    func setText(_ connectionLabelText: String, _ numberLabelText: String) {
         connectionLabel.text = connectionLabelText
         numberLabel.text = numberLabelText
-
-        connectionLabel.addGradient(colors: [UIColor.Gradient.firstColor, UIColor.Gradient.secondColor])
     }
 
     // MARK: - Private methods
@@ -157,6 +155,10 @@ final class ConnectionLabelAndNumberView: UIView {
         }
         numberView.addSubview(numberLabel)
         numberLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let gradientColors = [UIColor.Gradient.firstColor, UIColor.Gradient.secondColor]
+
+        connectionLabel.setGradient(colors: gradientColors)
 
         switch UIDevice.screenType {
         case .iphoneX: setupForIPhoneX()

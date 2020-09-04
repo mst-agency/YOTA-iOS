@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ConnectionCellOutput {
-    
+    func configure()
 }
