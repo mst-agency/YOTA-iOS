@@ -16,8 +16,13 @@ final class MoneyWidgetView: UIView {
     
     // MARK: - Properties (Private)
     
-    private lazy var mainTitle: UILabel = {
-        let label = UILabel()
+    private lazy var mainTitle: GradientLabel = {
+        let label = GradientLabel(frame: .zero)
+        label.setGradient(colors:
+            [
+                UIColor(red: 0.06274509804, green: 0.6823529412, blue: 0.9333333333, alpha: 1),
+                UIColor(red: 0.3921568627, green: 0.5098039216, blue: 0.9921568627, alpha: 1)
+        ])
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.circeBold(size: 16.0)
         label.text = "ДЕНЬГИ"
