@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "YotaModels",
+        "repositoryURL": "https://gitlab.com/mst-mobile/yota-models-ios.git",
+        "state": {
+          "branch": "develop",
+          "revision": "822f77ead1756573a488189e3cbb2e155bb6a4fd",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
