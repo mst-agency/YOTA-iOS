@@ -20,7 +20,10 @@ final class OperatorButton: UIView {
     private let type: OperatorButtonType
     private let imageView = UIImageView()
     private var action:( () -> Void )?
-    private var timer: Timer?
+    private var mainTimer: Timer?
+    private var firstSpeedTimer: Timer?
+    private var secondSpeedTimer: Timer?
+    private var thirdSpeedTimer: Timer?
     private var runCount: Float = 0
 
     // MARK: - Initialization
@@ -74,19 +77,65 @@ final class OperatorButton: UIView {
         ])
 
         setupGesture()
+        enable()
     }
 
-    @objc private func timerFire(timer: Timer) {
-        self.runCount += 0.01
+    private func setupMainTimer() {
+        let timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+            self.runCount += 1
 
-        if self.runCount >= 1 && self.runCount < 3 {
-                print("version1 \(self.runCount)")
-        } else if self.runCount >= 3 && self.runCount < 5 {
-                print("version2 = \(self.runCount)")
-        } else if self.runCount >= 5 {
-            action?()
-            print("self.runCount = \(self.runCount)")
-        }
+            if self.runCount >= 5 {
+                self.setupThirdSpeedTimer()
+            } else if self.runCount >= 3 {
+                self.setupSecondSpeedTimer()
+            } else if self.runCount >= 1 {
+                self.setupFirstSpeedTimer()
+            }
+        })
+
+        RunLoop.current.add(timer, forMode: .common)
+        mainTimer = timer
+    }
+
+    private func setupFirstSpeedTimer() {
+        guard firstSpeedTimer?.isValid == false || firstSpeedTimer == nil else { return }
+
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true, block: { _ in
+            self.action?()
+        })
+
+        RunLoop.current.add(timer, forMode: .common)
+        firstSpeedTimer = timer
+    }
+
+    private func setupSecondSpeedTimer() {
+        guard secondSpeedTimer?.isValid == false || secondSpeedTimer == nil else { return }
+        firstSpeedTimer?.invalidate()
+
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
+            self.action?()
+        })
+
+        RunLoop.current.add(timer, forMode: .common)
+        secondSpeedTimer = timer
+    }
+
+    private func setupThirdSpeedTimer() {
+        guard thirdSpeedTimer?.isValid == false || thirdSpeedTimer == nil else { return }
+        secondSpeedTimer?.invalidate()
+
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { _ in
+            self.action?()
+        })
+
+        timer.fire()
+
+        RunLoop.current.add(timer, forMode: .common)
+        thirdSpeedTimer = timer
+    }
+
+    private func invalidateAllTimers() {
+        [mainTimer, firstSpeedTimer, secondSpeedTimer, thirdSpeedTimer].forEach { $0?.invalidate() }
     }
 
     private func setupGesture() {
@@ -100,10 +149,10 @@ final class OperatorButton: UIView {
 
     @objc private func pressAction(gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
-            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(timerFire), userInfo: nil, repeats: true)
+            setupMainTimer()
         } else {
-            self.runCount = 0
-            self.timer?.invalidate()
+            invalidateAllTimers()
+            runCount = 0
         }
     }
 }
