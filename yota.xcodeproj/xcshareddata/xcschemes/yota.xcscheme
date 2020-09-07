@@ -62,6 +62,10 @@
                BlueprintName = "yotaUITests"
                ReferencedContainer = "container:yota.xcodeproj">
             </BuildableReference>
+            <LocationScenarioReference
+               identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
+               referenceType = "1">
+            </LocationScenarioReference>
          </TestableReference>
       </Testables>
    </TestAction>

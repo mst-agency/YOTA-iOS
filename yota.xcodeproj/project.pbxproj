@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,7 +25,6 @@
 		341C7D3D24F40E6500C6EA9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C7D3C24F40E6500C6EA9C /* AppDelegate.swift */; };
 		341C7D4624F40E6600C6EA9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341C7D4524F40E6600C6EA9C /* Assets.xcassets */; };
 		341C7D4924F40E6600C6EA9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341C7D4724F40E6600C6EA9C /* LaunchScreen.storyboard */; };
-		341C7D5424F40E6600C6EA9C /* yotaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C7D5324F40E6600C6EA9C /* yotaTests.swift */; };
 		341C7D5F24F40E6600C6EA9C /* yotaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341C7D5E24F40E6600C6EA9C /* yotaUITests.swift */; };
 		344E2A2E24F81CD700E9A24F /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A2D24F81CD700E9A24F /* UIFont.swift */; };
 		344E2A3024F81DB900E9A24F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E2A2F24F81DB900E9A24F /* UIColor.swift */; };
@@ -62,10 +61,38 @@
 		34D45E0824FA76F900A56152 /* MoneyHeaderViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */; };
 		34D45E0A24FA778900A56152 /* MoneyHeaderViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0924FA778900A56152 /* MoneyHeaderViewOutput.swift */; };
 		34D45E0C24FA77BA00A56152 /* MoneyHeaderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0B24FA77BA00A56152 /* MoneyHeaderPresenter.swift */; };
-		34FDC56B2503EC830051783F /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FDC56A2503EC830051783F /* GradientLabel.swift */; };
+		3A4805FD2506A15D0053C94C /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEDE525065CB80033F148 /* AccessibilityIdentifiers.swift */; };
 		3ADA2AC824F84FB800CB6E89 /* MainScreenViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2AC724F84FB800CB6E89 /* MainScreenViewOutput.swift */; };
 		3ADA2ACA24F84FCC00CB6E89 /* MainScreenModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADA2AC924F84FCC00CB6E89 /* MainScreenModuleOutput.swift */; };
 		3ADF305E24F8427200DE8045 /* MainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */; };
+		3AF0E4322506707B00E97FB1 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4312506707B00E97FB1 /* ServiceError.swift */; };
+		3AF0E43A250670DF00E97FB1 /* CodableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E436250670DF00E97FB1 /* CodableService.swift */; };
+		3AF0E43B250670DF00E97FB1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E437250670DF00E97FB1 /* NetworkService.swift */; };
+		3AF0E43C250670DF00E97FB1 /* MockGetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E438250670DF00E97FB1 /* MockGetProfileUseCase.swift */; };
+		3AF0E43D250670DF00E97FB1 /* ProfileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E439250670DF00E97FB1 /* ProfileLoader.swift */; };
+		3AF0E4542506710000E97FB1 /* TestMainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4412506710000E97FB1 /* TestMainScreenPresenter.swift */; };
+		3AF0E4552506710000E97FB1 /* TestMainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4432506710000E97FB1 /* TestMainScreenConfigurator.swift */; };
+		3AF0E4562506710000E97FB1 /* TestConnectionCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4462506710000E97FB1 /* TestConnectionCellPresenter.swift */; };
+		3AF0E4572506710000E97FB1 /* TestConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4482506710000E97FB1 /* TestConnectionCell.swift */; };
+		3AF0E4582506710000E97FB1 /* TestUIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E44A2506710000E97FB1 /* TestUIFont.swift */; };
+		3AF0E4592506710000E97FB1 /* MockMainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E44E2506710000E97FB1 /* MockMainScreenViewController.swift */; };
+		3AF0E45A2506710000E97FB1 /* MockConnectionCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4512506710000E97FB1 /* MockConnectionCellPresenter.swift */; };
+		3AF0E45B2506710000E97FB1 /* MockConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4532506710000E97FB1 /* MockConnectionCell.swift */; };
+		3AF0E46E2506714100E97FB1 /* GetProfileUseCaseImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E45C2506714100E97FB1 /* GetProfileUseCaseImp.swift */; };
+		3AF0E46F2506714100E97FB1 /* ConnectionCellPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E45E2506714100E97FB1 /* ConnectionCellPresentationModel.swift */; };
+		3AF0E4702506714100E97FB1 /* ConnectionCellExternalInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4602506714100E97FB1 /* ConnectionCellExternalInput.swift */; };
+		3AF0E4712506714100E97FB1 /* ConnectionCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4612506714100E97FB1 /* ConnectionCellPresenter.swift */; };
+		3AF0E4722506714100E97FB1 /* ConnectionCellOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4622506714100E97FB1 /* ConnectionCellOutput.swift */; };
+		3AF0E4732506714100E97FB1 /* GetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4632506714100E97FB1 /* GetProfileUseCase.swift */; };
+		3AF0E4742506714100E97FB1 /* OperatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4652506714100E97FB1 /* OperatorButton.swift */; };
+		3AF0E4752506714100E97FB1 /* ConnectLabelAndNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4662506714100E97FB1 /* ConnectLabelAndNumberView.swift */; };
+		3AF0E4762506714100E97FB1 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4672506714100E97FB1 /* PriceView.swift */; };
+		3AF0E4772506714100E97FB1 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4682506714100E97FB1 /* GradientLabel.swift */; };
+		3AF0E4782506714100E97FB1 /* UnlimitedAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4692506714100E97FB1 /* UnlimitedAppsView.swift */; };
+		3AF0E4792506714100E97FB1 /* ReelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E46A2506714100E97FB1 /* ReelCollectionViewCell.swift */; };
+		3AF0E47A2506714100E97FB1 /* ConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E46C2506714100E97FB1 /* ConnectionCell.swift */; };
+		3AF0E47B2506714100E97FB1 /* ConnectionCellInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E46D2506714100E97FB1 /* ConnectionCellInput.swift */; };
+		3AF0E47E2506743100E97FB1 /* YotaModels in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF0E47D2506743100E97FB1 /* YotaModels */; };
 		3AFCCB3624F7FA450083C773 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCCB3524F7FA450083C773 /* MainScreenPresenter.swift */; };
 		3AFCCB3924F810CE0083C773 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFCCB3824F810CE0083C773 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -109,7 +136,6 @@
 		341C7D4824F40E6600C6EA9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		341C7D4A24F40E6600C6EA9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		341C7D4F24F40E6600C6EA9C /* yotaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yotaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		341C7D5324F40E6600C6EA9C /* yotaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotaTests.swift; sourceTree = "<group>"; };
 		341C7D5524F40E6600C6EA9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		341C7D5A24F40E6600C6EA9C /* yotaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yotaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		341C7D5E24F40E6600C6EA9C /* yotaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotaUITests.swift; sourceTree = "<group>"; };
@@ -149,10 +175,36 @@
 		34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderViewInput.swift; sourceTree = "<group>"; };
 		34D45E0924FA778900A56152 /* MoneyHeaderViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderViewOutput.swift; sourceTree = "<group>"; };
 		34D45E0B24FA77BA00A56152 /* MoneyHeaderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderPresenter.swift; sourceTree = "<group>"; };
-		34FDC56A2503EC830051783F /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		3ADA2AC724F84FB800CB6E89 /* MainScreenViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewOutput.swift; sourceTree = "<group>"; };
 		3ADA2AC924F84FCC00CB6E89 /* MainScreenModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModuleOutput.swift; sourceTree = "<group>"; };
 		3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenConfigurator.swift; sourceTree = "<group>"; };
+		3AF0E4312506707B00E97FB1 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		3AF0E436250670DF00E97FB1 /* CodableService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableService.swift; sourceTree = "<group>"; };
+		3AF0E437250670DF00E97FB1 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3AF0E438250670DF00E97FB1 /* MockGetProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockGetProfileUseCase.swift; sourceTree = "<group>"; };
+		3AF0E439250670DF00E97FB1 /* ProfileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLoader.swift; sourceTree = "<group>"; };
+		3AF0E4412506710000E97FB1 /* TestMainScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMainScreenPresenter.swift; sourceTree = "<group>"; };
+		3AF0E4432506710000E97FB1 /* TestMainScreenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMainScreenConfigurator.swift; sourceTree = "<group>"; };
+		3AF0E4462506710000E97FB1 /* TestConnectionCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConnectionCellPresenter.swift; sourceTree = "<group>"; };
+		3AF0E4482506710000E97FB1 /* TestConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConnectionCell.swift; sourceTree = "<group>"; };
+		3AF0E44A2506710000E97FB1 /* TestUIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUIFont.swift; sourceTree = "<group>"; };
+		3AF0E44E2506710000E97FB1 /* MockMainScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMainScreenViewController.swift; sourceTree = "<group>"; };
+		3AF0E4512506710000E97FB1 /* MockConnectionCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockConnectionCellPresenter.swift; sourceTree = "<group>"; };
+		3AF0E4532506710000E97FB1 /* MockConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockConnectionCell.swift; sourceTree = "<group>"; };
+		3AF0E45C2506714100E97FB1 /* GetProfileUseCaseImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProfileUseCaseImp.swift; sourceTree = "<group>"; };
+		3AF0E45E2506714100E97FB1 /* ConnectionCellPresentationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCellPresentationModel.swift; sourceTree = "<group>"; };
+		3AF0E4602506714100E97FB1 /* ConnectionCellExternalInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCellExternalInput.swift; sourceTree = "<group>"; };
+		3AF0E4612506714100E97FB1 /* ConnectionCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCellPresenter.swift; sourceTree = "<group>"; };
+		3AF0E4622506714100E97FB1 /* ConnectionCellOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCellOutput.swift; sourceTree = "<group>"; };
+		3AF0E4632506714100E97FB1 /* GetProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProfileUseCase.swift; sourceTree = "<group>"; };
+		3AF0E4652506714100E97FB1 /* OperatorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorButton.swift; sourceTree = "<group>"; };
+		3AF0E4662506714100E97FB1 /* ConnectLabelAndNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectLabelAndNumberView.swift; sourceTree = "<group>"; };
+		3AF0E4672506714100E97FB1 /* PriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		3AF0E4682506714100E97FB1 /* GradientLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		3AF0E4692506714100E97FB1 /* UnlimitedAppsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnlimitedAppsView.swift; sourceTree = "<group>"; };
+		3AF0E46A2506714100E97FB1 /* ReelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReelCollectionViewCell.swift; sourceTree = "<group>"; };
+		3AF0E46C2506714100E97FB1 /* ConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCell.swift; sourceTree = "<group>"; };
+		3AF0E46D2506714100E97FB1 /* ConnectionCellInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCellInput.swift; sourceTree = "<group>"; };
 		3AFCCB3524F7FA450083C773 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
 		3AFCCB3824F810CE0083C773 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AF0E47E2506743100E97FB1 /* YotaModels in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +331,7 @@
 		341C7D3B24F40E6500C6EA9C /* yota */ = {
 			isa = PBXGroup;
 			children = (
+				3AF0E435250670DF00E97FB1 /* Services */,
 				346A80A724FEF5B7003841C7 /* Helpers */,
 				34951A9E24F98C1D002FF3C7 /* Common */,
 				340B083724F91E0400F83766 /* Entities */,
@@ -295,7 +349,8 @@
 		341C7D5224F40E6600C6EA9C /* yotaTests */ = {
 			isa = PBXGroup;
 			children = (
-				341C7D5324F40E6600C6EA9C /* yotaTests.swift */,
+				3AF0E44B2506710000E97FB1 /* Mocks */,
+				3AF0E43E2506710000E97FB1 /* Test */,
 				341C7D5524F40E6600C6EA9C /* Info.plist */,
 			);
 			path = yotaTests;
@@ -382,6 +437,7 @@
 		346A80A724FEF5B7003841C7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3AF0E4312506707B00E97FB1 /* ServiceError.swift */,
 				346A80A824FEF5B7003841C7 /* ScreenType.swift */,
 				347EEDE525065CB80033F148 /* AccessibilityIdentifiers.swift */,
 				34AA801225016F9D00BBDB53 /* WidgetSize.swift */,
@@ -520,17 +576,14 @@
 		34FDC5682503EC830051783F /* ConnectionCell */ = {
 			isa = PBXGroup;
 			children = (
-				34FDC5692503EC830051783F /* Views */,
+				3AF0E46B2506714100E97FB1 /* Cell */,
+				3AF0E4632506714100E97FB1 /* GetProfileUseCase.swift */,
+				3AF0E45C2506714100E97FB1 /* GetProfileUseCaseImp.swift */,
+				3AF0E45D2506714100E97FB1 /* PresentationModels */,
+				3AF0E45F2506714100E97FB1 /* Presenter */,
+				3AF0E4642506714100E97FB1 /* Views */,
 			);
 			path = ConnectionCell;
-			sourceTree = "<group>";
-		};
-		34FDC5692503EC830051783F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				34FDC56A2503EC830051783F /* GradientLabel.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		3ADF306024F8471000DE8045 /* Presenter */ = {
@@ -549,6 +602,175 @@
 				3ADF305D24F8427200DE8045 /* MainScreenConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		3AF0E435250670DF00E97FB1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E436250670DF00E97FB1 /* CodableService.swift */,
+				3AF0E437250670DF00E97FB1 /* NetworkService.swift */,
+				3AF0E438250670DF00E97FB1 /* MockGetProfileUseCase.swift */,
+				3AF0E439250670DF00E97FB1 /* ProfileLoader.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3AF0E43E2506710000E97FB1 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E43F2506710000E97FB1 /* MainScreen */,
+				3AF0E4492506710000E97FB1 /* Extensions */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		3AF0E43F2506710000E97FB1 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4402506710000E97FB1 /* Presenter */,
+				3AF0E4422506710000E97FB1 /* Configurator */,
+				3AF0E4442506710000E97FB1 /* ConnectionCell */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		3AF0E4402506710000E97FB1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4412506710000E97FB1 /* TestMainScreenPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3AF0E4422506710000E97FB1 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4432506710000E97FB1 /* TestMainScreenConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		3AF0E4442506710000E97FB1 /* ConnectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4452506710000E97FB1 /* Presenter */,
+				3AF0E4472506710000E97FB1 /* Cell */,
+			);
+			path = ConnectionCell;
+			sourceTree = "<group>";
+		};
+		3AF0E4452506710000E97FB1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4462506710000E97FB1 /* TestConnectionCellPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3AF0E4472506710000E97FB1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4482506710000E97FB1 /* TestConnectionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3AF0E4492506710000E97FB1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E44A2506710000E97FB1 /* TestUIFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3AF0E44B2506710000E97FB1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E44C2506710000E97FB1 /* MainScreen */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		3AF0E44C2506710000E97FB1 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E44D2506710000E97FB1 /* View */,
+				3AF0E44F2506710000E97FB1 /* ConnectionCell */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		3AF0E44D2506710000E97FB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E44E2506710000E97FB1 /* MockMainScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3AF0E44F2506710000E97FB1 /* ConnectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4502506710000E97FB1 /* Presenter */,
+				3AF0E4522506710000E97FB1 /* Cell */,
+			);
+			path = ConnectionCell;
+			sourceTree = "<group>";
+		};
+		3AF0E4502506710000E97FB1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4512506710000E97FB1 /* MockConnectionCellPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3AF0E4522506710000E97FB1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4532506710000E97FB1 /* MockConnectionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3AF0E45D2506714100E97FB1 /* PresentationModels */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E45E2506714100E97FB1 /* ConnectionCellPresentationModel.swift */,
+			);
+			path = PresentationModels;
+			sourceTree = "<group>";
+		};
+		3AF0E45F2506714100E97FB1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4602506714100E97FB1 /* ConnectionCellExternalInput.swift */,
+				3AF0E4612506714100E97FB1 /* ConnectionCellPresenter.swift */,
+				3AF0E4622506714100E97FB1 /* ConnectionCellOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3AF0E4642506714100E97FB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E4652506714100E97FB1 /* OperatorButton.swift */,
+				3AF0E4662506714100E97FB1 /* ConnectLabelAndNumberView.swift */,
+				3AF0E4672506714100E97FB1 /* PriceView.swift */,
+				3AF0E4682506714100E97FB1 /* GradientLabel.swift */,
+				3AF0E4692506714100E97FB1 /* UnlimitedAppsView.swift */,
+				3AF0E46A2506714100E97FB1 /* ReelCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3AF0E46B2506714100E97FB1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0E46C2506714100E97FB1 /* ConnectionCell.swift */,
+				3AF0E46D2506714100E97FB1 /* ConnectionCellInput.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		3AFCCB3724F7FC0E0083C773 /* MainScreen */ = {
@@ -600,6 +822,9 @@
 			dependencies = (
 			);
 			name = yota;
+			packageProductDependencies = (
+				3AF0E47D2506743100E97FB1 /* YotaModels */,
+			);
 			productName = yota;
 			productReference = 341C7D3924F40E6500C6EA9C /* yota.app */;
 			productType = "com.apple.product-type.application";
@@ -672,6 +897,9 @@
 				Base,
 			);
 			mainGroup = 341C7D3024F40E6500C6EA9C;
+			packageReferences = (
+				3AF0E47C2506743100E97FB1 /* XCRemoteSwiftPackageReference "yota-models-ios" */,
+			);
 			productRefGroup = 341C7D3A24F40E6500C6EA9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -742,7 +970,9 @@
 				34951AA724F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift in Sources */,
 				34017B9E24FD815B00AD15A5 /* InAppWidgetPresenter.swift in Sources */,
 				346E7DC124FC076800C9712D /* MainScreenViewController.swift in Sources */,
+				3AF0E4762506714100E97FB1 /* PriceView.swift in Sources */,
 				344E2A3C24F85A5000E9A24F /* MoneyPresenter.swift in Sources */,
+				3AF0E46E2506714100E97FB1 /* GetProfileUseCaseImp.swift in Sources */,
 				346A80A924FEF5B8003841C7 /* ScreenType.swift in Sources */,
 				346E7DAB24FBDD8400C9712D /* MoneyHeaderModuleOutput.swift in Sources */,
 				34D45E0A24FA778900A56152 /* MoneyHeaderViewOutput.swift in Sources */,
@@ -750,37 +980,53 @@
 				344E2A4024F87A1C00E9A24F /* MoneyModuleInput.swift in Sources */,
 				34017BA024FD819C00AD15A5 /* InAppWidgetView.swift in Sources */,
 				3489254525004CBF00035351 /* InAppCollectionView.swift in Sources */,
+				3AF0E43C250670DF00E97FB1 /* MockGetProfileUseCase.swift in Sources */,
 				34017BA624FD83DE00AD15A5 /* GetCustomerNotificationsUseCase.swift in Sources */,
 				346E7DA924FBDD4000C9712D /* MoneyHeaderModuleInput.swift in Sources */,
 				344E2A3924F83BF300E9A24F /* PaySystemView.swift in Sources */,
 				344E2A3024F81DB900E9A24F /* UIColor.swift in Sources */,
 				34951AA124F98C52002FF3C7 /* BalanceFormatter.swift in Sources */,
+				3AF0E4702506714100E97FB1 /* ConnectionCellExternalInput.swift in Sources */,
 				34017BAA24FD856B00AD15A5 /* DisplayCondition.swift in Sources */,
+				3AF0E46F2506714100E97FB1 /* ConnectionCellPresentationModel.swift in Sources */,
+				3AF0E4722506714100E97FB1 /* ConnectionCellOutput.swift in Sources */,
 				347A5C4424F7061900EDF0D2 /* MoneyWidgetView.swift in Sources */,
 				34D45E0824FA76F900A56152 /* MoneyHeaderViewInput.swift in Sources */,
+				3AF0E43D250670DF00E97FB1 /* ProfileLoader.swift in Sources */,
+				3AF0E4712506714100E97FB1 /* ConnectionCellPresenter.swift in Sources */,
 				340B083224F903D000F83766 /* MoneyWidgetViewInput.swift in Sources */,
 				34017B9C24FD811E00AD15A5 /* InAppWidgetConfigurator.swift in Sources */,
 				340B083324F903D000F83766 /* MoneyWidgetViewOutput.swift in Sources */,
 				344E2A2E24F81CD700E9A24F /* UIFont.swift in Sources */,
+				3AF0E4742506714100E97FB1 /* OperatorButton.swift in Sources */,
 				346A80A624FEF56A003841C7 /* UIDevice.swift in Sources */,
 				346A80AC24FF03B2003841C7 /* MoneyWidgetCell.swift in Sources */,
+				3AF0E4752506714100E97FB1 /* ConnectLabelAndNumberView.swift in Sources */,
+				3AF0E43A250670DF00E97FB1 /* CodableService.swift in Sources */,
+				3AF0E47B2506714100E97FB1 /* ConnectionCellInput.swift in Sources */,
 				3489254325004B5300035351 /* InAppCell.swift in Sources */,
 				347EEDE625065CB80033F148 /* AccessibilityIdentifiers.swift in Sources */,
+				3AF0E47A2506714100E97FB1 /* ConnectionCell.swift in Sources */,
 				34951AA324F98CC6002FF3C7 /* AccountNumberFormatter.swift in Sources */,
 				344E2A4224F87A3900E9A24F /* MoneyModuleOutput.swift in Sources */,
-				34FDC56B2503EC830051783F /* GradientLabel.swift in Sources */,
 				34017BA824FD84EC00AD15A5 /* InAppNotification.swift in Sources */,
+				3AF0E4772506714100E97FB1 /* GradientLabel.swift in Sources */,
+				3AF0E4732506714100E97FB1 /* GetProfileUseCase.swift in Sources */,
 				340B083624F9076600F83766 /* MoneyModuleConfigurator.swift in Sources */,
+				3AF0E43B250670DF00E97FB1 /* NetworkService.swift in Sources */,
 				340B083D24F91FCD00F83766 /* Currency.swift in Sources */,
 				34D45E0C24FA77BA00A56152 /* MoneyHeaderPresenter.swift in Sources */,
 				3496C81425058CBF007193C0 /* InAppCollectionConfigurator.swift in Sources */,
 				340B083B24F91EAA00F83766 /* CardInfoView.swift in Sources */,
 				34AA801325016F9D00BBDB53 /* WidgetSize.swift in Sources */,
 				34D45E0324FA750600A56152 /* MoneyHeadertView.swift in Sources */,
+				3AF0E4792506714100E97FB1 /* ReelCollectionViewCell.swift in Sources */,
 				34951AA924F99E7B002FF3C7 /* PaySystem.swift in Sources */,
+				3AF0E4322506707B00E97FB1 /* ServiceError.swift in Sources */,
 				340B083924F91E2F00F83766 /* CardInfo.swift in Sources */,
 				3ADF305E24F8427200DE8045 /* MainScreenConfigurator.swift in Sources */,
 				348925412500477B00035351 /* InAppCollectionViewCell.swift in Sources */,
+				3AF0E4782506714100E97FB1 /* UnlimitedAppsView.swift in Sources */,
 				3496C80E2505830C007193C0 /* InAppCollectionViewInput.swift in Sources */,
 				3496C81125058774007193C0 /* InAppCollectionViewPresenter.swift in Sources */,
 				346E7DC024FC076800C9712D /* MainScreenInput.swift in Sources */,
@@ -799,7 +1045,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				341C7D5424F40E6600C6EA9C /* yotaTests.swift in Sources */,
+				3AF0E4552506710000E97FB1 /* TestMainScreenConfigurator.swift in Sources */,
+				3AF0E4562506710000E97FB1 /* TestConnectionCellPresenter.swift in Sources */,
+				3AF0E4542506710000E97FB1 /* TestMainScreenPresenter.swift in Sources */,
+				3AF0E45A2506710000E97FB1 /* MockConnectionCellPresenter.swift in Sources */,
+				3AF0E4592506710000E97FB1 /* MockMainScreenViewController.swift in Sources */,
+				3AF0E45B2506710000E97FB1 /* MockConnectionCell.swift in Sources */,
+				3AF0E4582506710000E97FB1 /* TestUIFont.swift in Sources */,
+				3AF0E4572506710000E97FB1 /* TestConnectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +1061,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				341C7D5F24F40E6600C6EA9C /* yotaUITests.swift in Sources */,
+				3A4805FD2506A15D0053C94C /* AccessibilityIdentifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,6 +1366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3AF0E47C2506743100E97FB1 /* XCRemoteSwiftPackageReference "yota-models-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitlab.com/mst-mobile/yota-models-ios.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3AF0E47D2506743100E97FB1 /* YotaModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AF0E47C2506743100E97FB1 /* XCRemoteSwiftPackageReference "yota-models-ios" */;
+			productName = YotaModels;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 341C7D3124F40E6500C6EA9C /* Project object */;
 }
