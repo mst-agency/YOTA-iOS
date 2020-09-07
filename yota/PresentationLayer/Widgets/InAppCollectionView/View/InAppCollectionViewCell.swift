@@ -19,6 +19,7 @@ final class InAppCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        widgetView.accessibilityIdentifier = AccessibilityIdentifiers.InApp.widgetView
         
         backgroundColor = UIColor.MainScreen.tableViewBackground
         widgetView.translatesAutoresizingMaskIntoConstraints = false

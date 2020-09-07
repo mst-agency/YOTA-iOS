@@ -13,7 +13,7 @@ struct ConnectionCellPresentationModel {
     // MARK: - Property list
 
     let unlimitedAppsText = "Безлимитные мобильные приложения"
-    let priceDescriptionText = "Стоимость за 30 дней"
+    let priceDescriptionText = "Общая сумма на 30 дней"
     let connectionText = "СВЯЗЬ"
 
     let imageNamesArray: [String]

@@ -20,6 +20,8 @@ final class InAppCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        accessibilityIdentifier = AccessibilityIdentifiers.InApp.cell
+        collectionView.accessibilityIdentifier = AccessibilityIdentifiers.InApp.inAppCollectionView
         let conf = InAppCollectionConfigurator()
         conf.configureModule(viewInput: collectionView)
         contentView.addSubview(collectionView)

@@ -39,6 +39,10 @@ struct AccessibilityIdentifiers {
     }
 
     struct InApp {
+        static let cell = "inAppCell"
+        static let contentView = "inAppCellContentView"
+        static let inAppCollectionView = "inAppCollectionView"
+        static let widgetView = "widgetView"
         static let inAppTitle = "inAppTitle"
         static let inAppActionButton = "inAppActionButton"
         static let inAppCloseButton = "inAppCloseButton"

@@ -162,7 +162,7 @@ final class ConnectionLabelAndNumberView: UIView {
 
     private func addAccessibilityIdenfiers() {
         connectionLabel.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.connectionLabel
-        numberView.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.connectionLabel
+        numberView.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.numberView
         numberLabel.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.numberLabel
     }
 
