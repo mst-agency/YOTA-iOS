@@ -26,6 +26,7 @@ final class MoneyHeaderWidgetView: UIView {
         let mainView = UIView(frame: frame)
         mainView.translatesAutoresizingMaskIntoConstraints = false
         mainView.backgroundColor = UIColor.Money.headerBackground
+        mainView.accessibilityIdentifier = AccessibilityIdentifiers.MoneyHeaderModule.mainView
         return mainView
     }()
     
@@ -36,6 +37,7 @@ final class MoneyHeaderWidgetView: UIView {
         label.text = "Баланс"
         label.textAlignment = .left
         label.textColor = UIColor.Money.title
+        label.accessibilityIdentifier = AccessibilityIdentifiers.MoneyHeaderModule.headerBalanceTitleLabel
         return label
     }()
     
@@ -56,6 +58,7 @@ final class MoneyHeaderWidgetView: UIView {
         let labelTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTapBalance))
         label.addGestureRecognizer(labelTapGesture)
         label.isUserInteractionEnabled = true
+        label.accessibilityIdentifier = AccessibilityIdentifiers.MoneyHeaderModule.headerBalanceLabel
         return label
     }()
     

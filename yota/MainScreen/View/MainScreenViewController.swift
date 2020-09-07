@@ -11,7 +11,7 @@ import UIKit
 final class MainScreenViewController: UIViewController {
 
     // MARK: - Property list
-    
+
     private let presenter: MainScreenViewOutput
 
     private let tableView = UITableView()
@@ -33,7 +33,7 @@ final class MainScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
+
         setupTableView()
         setupHeaderView()
     }
@@ -43,6 +43,7 @@ final class MainScreenViewController: UIViewController {
     private func setupTableView() {
         tableView.register(InAppCell.self, forCellReuseIdentifier: InAppCell.reuseID)
         tableView.register(MoneyWidgetCell.self, forCellReuseIdentifier: MoneyWidgetCell.reuseID)
+        tableView.register(ConnectionCell.self, forCellReuseIdentifier: ConnectionCell.reuseID)
 
         tableView.dataSource = self
         tableView.delegate = self
@@ -98,8 +99,14 @@ extension MainScreenViewController: UITableViewDataSource {
         case InAppCell.reuseID:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: InAppCell.reuseID) as? InAppCell else { fallthrough }
             return cell
-        default:
-            return UITableViewCell()
+        case ConnectionCell.reuseID:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConnectionCell.reuseID) as? ConnectionCell,
+                let cellPresenter = presenter.getCellPresenter() as? ConnectionCellPresenter else { fallthrough }
+            cell.presenter = cellPresenter
+            cellPresenter.cell = cell
+            return cell
+
+        default: return UITableViewCell()
         }
     }
 }
@@ -122,4 +129,11 @@ extension MainScreenViewController: UITableViewDelegate {
 
 // MARK: IMainScreenViewController
 
-extension MainScreenViewController: MainScreenInput {}
+extension MainScreenViewController: MainScreenInput {
+
+    func recalculateCellSize() {
+        func recalculateCellSize() {
+            tableView.performBatchUpdates(nil)
+        }
+    }
+}

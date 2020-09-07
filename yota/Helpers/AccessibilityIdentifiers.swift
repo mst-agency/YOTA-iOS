@@ -21,4 +21,26 @@ struct AccessibilityIdentifiers {
         static let priceLabel = "priceLabel"
         static let separatorView = "separatorView"
     }
+
+    struct MoneyHeaderModule {
+
+        static let headerBalanceTitleLabel = "headerBalanceTitle"
+        static let paySystemImageView = "headerPaySistemImageView"
+        static let headerBalanceLabel = "headerBalanceLabel"
+        static let mainView = "mainView"
+    }
+
+    struct MoneyModule {
+
+        static let mainTitleLabel = "mainTitleLabel"
+        static let widgetBalanceTitleLabel = "widgetBalanceTitle"
+        static let cardNumberLabel = "cardNumberLabel"
+        static let widgetBalanceLabel = "widgetBalanceLabel"
+    }
+
+    struct InApp {
+        static let inAppTitle = "inAppTitle"
+        static let inAppActionButton = "inAppActionButton"
+        static let inAppCloseButton = "inAppCloseButton"
+    }
 }

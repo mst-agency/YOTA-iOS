@@ -16,11 +16,6 @@ class MockMainScreenViewController: MainScreenInput {
 
     var expectation = XCTestExpectation()
 
-    func reloadTable() {
-        reloadTableIsCalled = true
-        expectation.fulfill()
-    }
-
     func recalculateCellSize() {
         recalculateCellSizeIsCalled = true
         expectation.fulfill()

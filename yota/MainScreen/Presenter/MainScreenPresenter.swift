@@ -6,14 +6,29 @@
 //  Copyright © 2020 MST. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import CoreGraphics
 
 final class MainScreenPresenter {
 
     // MARK: - Property list
 
     var view: MainScreenInput?
-    private var widgets: [String] = [MoneyWidgetCell.reuseID, InAppCell.reuseID]
+    private var widgets: [String] = [MoneyWidgetCell.reuseID, InAppCell.reuseID, ConnectionCell.reuseID]
+
+    // MARK: - Private methods
+
+    private func configureConnectionCellPresenter() -> CellPresenter {
+        let mockUseCase = MockGetProfileUseCase()
+        let connectionCellPresenter = ConnectionCellPresenter(useCase: mockUseCase, updateCellSizeAction: updateCellSizeAction)
+        mockUseCase.cellPresenter = connectionCellPresenter
+        return connectionCellPresenter
+    }
+
+    private lazy var updateCellSizeAction: () -> Void = { [weak self] in
+        self?.view?.recalculateCellSize()
+    }
+
 }
 
 // MARK: MainScreenModuleOutput
@@ -23,8 +38,9 @@ extension MainScreenPresenter: MainScreenModuleOutput { }
 // MARK: - MainScreenViewOutput
 
 extension MainScreenPresenter: MainScreenViewOutput {
-    func viewDidLoad() {
-        return
+
+    func getCellPresenter() -> CellPresenter {
+        return configureConnectionCellPresenter()
     }
     
     func getNumberOfRows() -> Int {

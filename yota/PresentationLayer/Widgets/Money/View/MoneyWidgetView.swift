@@ -28,6 +28,7 @@ final class MoneyWidgetView: UIView {
         label.text = "ДЕНЬГИ"
         label.textAlignment = .left
         label.textColor = UIColor.Money.mainTitle
+        label.accessibilityIdentifier = AccessibilityIdentifiers.MoneyModule.mainTitleLabel
         return label
     }()
     
@@ -38,6 +39,7 @@ final class MoneyWidgetView: UIView {
         label.text = "Баланс"
         label.textAlignment = .left
         label.textColor = UIColor.Money.title
+        label.accessibilityIdentifier = AccessibilityIdentifiers.MoneyModule.widgetBalanceTitleLabel
         return label
     }()
     
@@ -58,6 +60,7 @@ final class MoneyWidgetView: UIView {
         let labelTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTapBalance))
         label.addGestureRecognizer(labelTapGesture)
         label.isUserInteractionEnabled = true
+        label.accessibilityIdentifier = AccessibilityIdentifiers.MoneyModule.widgetBalanceLabel
         return label
     }()
     

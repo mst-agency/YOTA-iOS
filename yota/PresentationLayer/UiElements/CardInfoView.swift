@@ -44,6 +44,7 @@ final class CardInfoView: UIView {
         label.text = "* 8878"
         label.textAlignment = .right
         label.textColor = UIColor.Money.title
+        label.accessibilityIdentifier = AccessibilityIdentifiers.MoneyModule.cardNumberLabel
         return label
     }()
     

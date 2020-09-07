@@ -44,6 +44,14 @@ struct WidgetSize {
             case .ipad:
                 size = CGSize(width: 540, height: 137)
             }
+        case ConnectionCell.reuseID:
+            switch UIDevice.screenType {
+            case .iphone5: size = CGSize(width: 0, height: 140)
+            case .iphone6: size = CGSize(width: 0, height: 180)
+            case .iphone6plus: size = CGSize(width: 0, height: 170)
+            case .iphoneX: size = CGSize(width: 0, height: 158)
+            case .ipad: size = CGSize(width: 0, height: 190)
+            }
         default:
            size = CGSize(width: 0, height: 0)
         }

@@ -36,4 +36,13 @@ extension UIColor {
         static let title = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         static let background = UIColor(red: 0, green: 0.682, blue: 0.937, alpha: 1)
     }
+
+    struct Gradient {
+        static let firstColor = UIColor(red: 0.06, green: 0.68, blue: 0.93, alpha: 1)
+        static let secondColor = UIColor(red: 0.39, green: 0.51, blue: 0.99, alpha: 1)
+    }
+
+    struct Connection {
+        static let separatorColor = UIColor(red: 0.91, green: 0.94, blue: 0.98, alpha: 1)
+    }
 }

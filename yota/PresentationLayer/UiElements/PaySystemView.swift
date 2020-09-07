@@ -20,6 +20,7 @@ final class PaySystemView: UIView {
         let imageView = UIImageView(frame: CGRect())
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.accessibilityIdentifier = AccessibilityIdentifiers.MoneyHeaderModule.paySystemImageView
         return imageView
     }()
 
