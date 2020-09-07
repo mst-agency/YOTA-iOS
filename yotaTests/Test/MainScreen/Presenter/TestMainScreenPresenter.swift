@@ -28,9 +28,4 @@ class TestMainScreenPresenter: XCTestCase {
         sut = nil
         mockViewController = nil
     }
-
-    func testReloadTableIsCalled() {
-        sut.viewDidLoad()
-        XCTAssertTrue(mockViewController.reloadTableIsCalled)
-    }
 }
