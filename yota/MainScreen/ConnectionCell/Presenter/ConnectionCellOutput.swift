@@ -6,8 +6,10 @@
 //  Copyright © 2020 MST. All rights reserved.
 //
 
-import Foundation
+import YotaModels
 
-protocol ConnectionCellOutput {
+protocol ConnectionCellOutput: AnyObject {
     func configure()
+    func successLoading(_ profile: Profile)
+    func loadingError(_ error: ServiceError)
 }

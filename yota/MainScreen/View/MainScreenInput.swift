@@ -8,4 +8,7 @@
 
 import Foundation
 
-protocol MainScreenInput: AnyObject {}
+protocol MainScreenInput: AnyObject {
+    func reloadTable()
+    func recalculateCellSize()
+}

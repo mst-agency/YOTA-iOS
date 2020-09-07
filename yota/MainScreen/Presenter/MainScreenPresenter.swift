@@ -14,6 +14,21 @@ final class MainScreenPresenter {
 
     var view: MainScreenInput?
     private var widgets: [String] = [MoneyWidgetCell.reuseID, InAppCell.reuseID]
+    private var cellPresenters = [CellPresenter]()
+
+    // MARK: - Private methods
+
+    private func configureConnectionCellPresenter() {
+        let mockUseCase = MockGetProfileUseCase()
+        let connectionCellPresenter = ConnectionCellPresenter(useCase: mockUseCase, updateCellSizeAction: updateCellSizeAction)
+        mockUseCase.cellPresenter = connectionCellPresenter
+        cellPresenters.append(connectionCellPresenter)
+    }
+
+    private lazy var updateCellSizeAction: () -> Void = { [weak self] in
+        self?.view?.recalculateCellSize()
+    }
+
 }
 
 // MARK: MainScreenModuleOutput
@@ -24,10 +39,7 @@ extension MainScreenPresenter: MainScreenModuleOutput { }
 
 extension MainScreenPresenter: MainScreenViewOutput {
     func viewDidLoad() {
-
-        let connectionCellPresenter = ConnectionCellPresenter()
-        cellPresenters.append(connectionCellPresenter)
-
+        configureConnectionCellPresenter()
         view?.reloadTable()
     }
     

@@ -22,7 +22,6 @@ final class ConnectionCell: UITableViewCell {
     private let connectLabelAndNumberView = ConnectionLabelAndNumberView()
     private let unlimitedAppsView = UnlimitedAppsView()
     private let priceView = PriceView()
-    private let reelView = ReelView()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -38,7 +37,7 @@ final class ConnectionCell: UITableViewCell {
     private func setup() {
         contentView.addSubview(containerView)
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        [connectLabelAndNumberView, unlimitedAppsView, priceView, reelView].forEach {
+        [connectLabelAndNumberView, unlimitedAppsView, priceView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             containerView.addSubview($0)
         }
@@ -59,11 +58,7 @@ final class ConnectionCell: UITableViewCell {
             unlimitedAppsView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             unlimitedAppsView.topAnchor.constraint(equalTo: priceView.bottomAnchor),
             unlimitedAppsView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-
-            reelView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            reelView.topAnchor.constraint(equalTo: unlimitedAppsView.bottomAnchor),
-            reelView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            reelView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+            unlimitedAppsView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
         ])
     }
 }
@@ -76,7 +71,7 @@ extension ConnectionCell: ConnectionCellInput {
         connectLabelAndNumberView.setText(connectionLabelText, numberLabelText)
     }
 
-    func setInlimitedAppsViewText(_ text: String, and imagesNamed: [String]) {
+    func setUnlimitedAppsViewText(_ text: String, and imagesNamed: [String]) {
         unlimitedAppsView.setLabelText(text)
         unlimitedAppsView.setImages(imagesNamed.compactMap { UIImage(named: $0) })
     }

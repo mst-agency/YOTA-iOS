@@ -7,22 +7,50 @@
 //
 
 import Foundation
+import YotaModels
 
 final class ConnectionCellPresenter {
 
     // MARK: - Property list
 
     weak var cell: ConnectionCellInput?
+    private var profile: Profile?
+    private let useCase: GetProfileUseCase
+    private let updateCellSizeAction: () -> Void
+
+    init(useCase: GetProfileUseCase, updateCellSizeAction: @escaping () -> Void) {
+        self.useCase = useCase
+        self.updateCellSizeAction = updateCellSizeAction
+    }
+
 }
 
 // MARK: - ConnectionCellOutput
 
 extension ConnectionCellPresenter: ConnectionCellOutput {
+
     func configure() {
-        cell?.setInlimitedAppsViewText("Безлимитные мобильные приложения", and: ["fb.png", "insta.png", "ok.png"])
-        cell?.setPriceDescriptionLabelText("Стоимость за 30 дней", price: "360 ₽")
-        cell?.setConnectionAndNumberViewText(connectionLabelText: "СВЯЗЬ", numberLabelText: "+7 999 532-23-89")
+        useCase.getProfile()
+    }
+
+    func successLoading(_ profile: Profile) {
+        self.profile = profile
+        let presentationModel = ConnectionCellPresentationModel(from: profile)
+        cell?.setUnlimitedAppsViewText(presentationModel.unlimitedAppsText,
+                                       and: presentationModel.imageNamesArray)
+        cell?.setConnectionAndNumberViewText(connectionLabelText: presentationModel.connectionText,
+                                             numberLabelText: presentationModel.phoneNumber)
+        cell?.setPriceDescriptionLabelText(presentationModel.priceDescriptionText,
+                                           price: presentationModel.fullCostOfThePlannedTariff)
+        updateCellSizeAction()
+        
+    }
+
+    func loadingError(_ error: ServiceError) {
+        // TODO: - Отображать ошибку
     }
 }
+
+// MARK: CellPresenter
 
 extension ConnectionCellPresenter: CellPresenter { }

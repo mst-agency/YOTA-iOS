@@ -128,6 +128,10 @@ extension MainScreenViewController: UITableViewDelegate {
             header?.didScroll(scrollView: scrollView)
         }
     }
+
+    func recalculateCellSize() {
+        tableView.performBatchUpdates(nil)
+    }
 }
 
 // MARK: IMainScreenViewController
