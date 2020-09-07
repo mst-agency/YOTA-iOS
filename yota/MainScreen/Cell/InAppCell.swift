@@ -20,6 +20,8 @@ final class InAppCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        let conf = InAppCollectionConfigurator()
+        conf.configureModule(viewInput: collectionView)
         contentView.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(

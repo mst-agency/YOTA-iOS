@@ -9,8 +9,8 @@
 import UIKit
 
 protocol MainScreenViewOutput {
-    func didTriggerGetNumberOfRows() -> Int
-    func didTriggerGetWidgetCell(index: Int, tableView: UITableView) -> UITableViewCell
+    func viewDidLoad()
+    func getNumberOfRows() -> Int
+    func didTriggerGetWidgetCellReuseID(index: Int) -> String
     func didTriggerGetWidgetSize(index: Int) -> CGFloat
-    func didTriggerViewDidLoad()
 }

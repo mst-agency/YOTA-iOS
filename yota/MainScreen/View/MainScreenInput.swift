@@ -8,6 +8,4 @@
 
 import Foundation
 
-protocol MainScreenInput: AnyObject {
-//    func updateData(data: [Cells])
-}
+protocol MainScreenInput: AnyObject {}

@@ -22,7 +22,7 @@ final class MoneyWidgetView: UIView {
             [
                 UIColor(red: 0.06274509804, green: 0.6823529412, blue: 0.9333333333, alpha: 1),
                 UIColor(red: 0.3921568627, green: 0.5098039216, blue: 0.9921568627, alpha: 1)
-        ])
+            ])
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.circeBold(size: 16.0)
         label.text = "ДЕНЬГИ"
@@ -53,7 +53,7 @@ final class MoneyWidgetView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.circeBold(size: 28.0)
-        label.text = "0,8 ₽"
+        label.text = ""
         label.textAlignment = .right
         let labelTapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTapBalance))
         label.addGestureRecognizer(labelTapGesture)

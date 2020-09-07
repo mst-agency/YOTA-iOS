@@ -13,16 +13,13 @@ final class InAppCollectionViewCell: UICollectionViewCell {
     static let reuseID = String(describing: InAppCollectionViewCell.self)
     
     // MARK: - Properties (Private)
-    
     private let widgetView = InAppWidgetView(frame: .zero)
-
+    
     // MARK: - Initializers (Public)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let conf = MoneyModuleConfigurator()
-        conf.configureModuleForViewInput(viewInput: widgetView)
         backgroundColor = UIColor.MainScreen.tableViewBackground
         widgetView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(widgetView)
@@ -37,5 +34,10 @@ final class InAppCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("InAppCollectionCell has not been implemented")
+    }
+    
+    func configure(notificationInfo: InAppNotification) {
+        let conf = InAppWidgetConfigurator()
+        conf.configureModule(viewInput: widgetView, notificationInfo: notificationInfo)
     }
 }

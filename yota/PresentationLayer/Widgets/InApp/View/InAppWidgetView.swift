@@ -16,17 +16,19 @@ final class InAppWidgetView: UIView {
     
     // MARK: - Properties (Private)
     
+    private var action: (() -> Void )?
+
     private lazy var mainTitle: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.circeExtraBold(size: 14.0)
         label.numberOfLines = 0
-        label.text = "Недостаточно средств для продления пакета. Доступ в интернет заблокирован. Пополните счет на ХХХ ₽"
+        label.text = ""
         label.textAlignment = .center
         label.textColor = UIColor.InApp.title
         return label
     }()
-    
+
     private lazy var actionButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.layer.cornerRadius = 15
@@ -34,16 +36,19 @@ final class InAppWidgetView: UIView {
         button.setTitleColor(UIColor.InAppButton.title, for: .normal)
         button.titleLabel?.font = UIFont.circeExtraBold(size: 14)
         button.titleLabel?.textAlignment = .center
-        button.setTitle("Пополнить счет на xxxx р", for: .normal)
+        button.setTitle("", for: .normal)
+        button.isHidden = true
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(actionButtonTap), for: .touchUpInside)
         return button
     }()
     
-    private lazy var closebutton: UIButton = {
+    private lazy var closeButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(#imageLiteral(resourceName: "inAppClose"), for: .normal)
         button.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+        button.addTarget(self, action: #selector(closeButtonTap), for: .touchUpInside)
         return button
     }()
     
@@ -84,17 +89,44 @@ final class InAppWidgetView: UIView {
                 mainTitle.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -9)
             ])
         
-        addSubview(closebutton)
+        addSubview(closeButton)
         NSLayoutConstraint.activate(
             [
-                closebutton.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-                closebutton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-                closebutton.heightAnchor.constraint(equalToConstant: 12),
-                closebutton.widthAnchor.constraint(equalToConstant: 12)
+                closeButton.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+                closeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+                closeButton.heightAnchor.constraint(equalToConstant: 12),
+                closeButton.widthAnchor.constraint(equalToConstant: 12)
             ])
+    }
+    
+    @objc private func actionButtonTap() {
+        self.action?()
+    }
+    
+    @objc private func closeButtonTap() {
+        output?.tapClose()
     }
 }
 
 // MARK: - MoneyWidgetViewInput
 
-extension InAppWidgetView: InAppWidgetViewInput {}
+extension InAppWidgetView: InAppWidgetViewInput {
+    func dropContent() {
+        self.mainTitle.text = ""
+        self.actionButton.setTitle("", for: .normal)
+        self.actionButton.isHidden = true
+        self.action = nil
+    }
+    func setButtonAction(action: @escaping (() -> Void)) {
+        self.action = action
+    }
+    
+    func displayButtonTitle(title: String) {
+        self.actionButton.isHidden = false
+        self.actionButton.setTitle(title, for: .normal)
+    }
+    
+    func displayInAppContent(text: String) {
+        self.mainTitle.text = text
+    }
+}

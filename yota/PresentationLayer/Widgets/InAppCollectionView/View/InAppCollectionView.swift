@@ -9,9 +9,9 @@
 import UIKit
 
 final class InAppCollectionView: UICollectionView {
-    // MARK: - Properties (Private)
     
-    private let infiniteSize = 10000
+    // MARK: - Properties (Public)
+    var output: InAppCollectionViewOutput?
     
     // MARK: - Initializers (Public)
     
@@ -39,7 +39,18 @@ final class InAppCollectionView: UICollectionView {
     
     private func scrollToCenter() {
         DispatchQueue.main.async {
-            self.scrollToItem(at: IndexPath(row: self.infiniteSize/2, section: 0), at: .centeredHorizontally, animated: false)
+            guard let output = self.output else { return }
+            self.scrollToItem(at: IndexPath(row: output.didTriggeredNumberOfItemsInSection() / 2, section: 0), at: .centeredHorizontally, animated: false)
+        }
+    }
+}
+
+// MARK: - InAppCollectionViewInput
+
+extension InAppCollectionView: InAppCollectionViewInput {
+    func showData() {
+        DispatchQueue.main.async {
+            self.reloadData()
         }
     }
 }
@@ -54,11 +65,14 @@ extension InAppCollectionView: UICollectionViewDelegate {
 
 extension InAppCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.infiniteSize
+        output?.didTriggeredNumberOfItemsInSection() ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InAppCollectionViewCell.reuseID, for: indexPath) as? InAppCollectionViewCell else { fatalError("Wrong cell") }
+        if let output = self.output {
+            cell.configure(notificationInfo: (output.didTriggeredCellConfigure(index: indexPath.row)))
+        }
         return cell
     }
 }
@@ -68,5 +82,9 @@ extension InAppCollectionView: UICollectionViewDataSource {
 extension  InAppCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         WidgetSize.widgetSize(widgetReuseID: InAppCell.reuseID)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 0, left: WidgetSize.widgetPadding(widgetReuseID: InAppCell.reuseID).left * 2, bottom: 0, right: WidgetSize.widgetPadding(widgetReuseID: InAppCell.reuseID).right * 2)
     }
 }

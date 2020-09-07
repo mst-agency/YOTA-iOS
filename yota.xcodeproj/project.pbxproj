@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34017B9C24FD811E00AD15A5 /* InAppModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017B9B24FD811E00AD15A5 /* InAppModuleConfigurator.swift */; };
-		34017B9E24FD815B00AD15A5 /* InAppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017B9D24FD815B00AD15A5 /* InAppPresenter.swift */; };
+		34017B9C24FD811E00AD15A5 /* InAppWidgetConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017B9B24FD811E00AD15A5 /* InAppWidgetConfigurator.swift */; };
+		34017B9E24FD815B00AD15A5 /* InAppWidgetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017B9D24FD815B00AD15A5 /* InAppWidgetPresenter.swift */; };
 		34017BA024FD819C00AD15A5 /* InAppWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017B9F24FD819C00AD15A5 /* InAppWidgetView.swift */; };
 		34017BA224FD81B200AD15A5 /* InAppWidgetViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017BA124FD81B200AD15A5 /* InAppWidgetViewOutput.swift */; };
 		34017BA424FD81D400AD15A5 /* InAppWidgetViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34017BA324FD81D400AD15A5 /* InAppWidgetViewInput.swift */; };
@@ -44,6 +44,7 @@
 		347A5C5324F7170B00EDF0D2 /* Circe-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5024F7170B00EDF0D2 /* Circe-Regular.ttf */; };
 		347A5C5424F7170B00EDF0D2 /* Circe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5124F7170B00EDF0D2 /* Circe-Bold.ttf */; };
 		347A5C5524F7170B00EDF0D2 /* Circe-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5224F7170B00EDF0D2 /* Circe-ExtraBold.ttf */; };
+		347EEDE42506526D0033F148 /* CellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEDE32506526D0033F148 /* CellPresenter.swift */; };
 		348925412500477B00035351 /* InAppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348925402500477B00035351 /* InAppCollectionViewCell.swift */; };
 		3489254325004B5300035351 /* InAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254225004B5300035351 /* InAppCell.swift */; };
 		3489254525004CBF00035351 /* InAppCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254425004CBF00035351 /* InAppCollectionView.swift */; };
@@ -51,6 +52,10 @@
 		34951AA324F98CC6002FF3C7 /* AccountNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34951AA224F98CC6002FF3C7 /* AccountNumberFormatter.swift */; };
 		34951AA724F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34951AA624F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift */; };
 		34951AA924F99E7B002FF3C7 /* PaySystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34951AA824F99E7B002FF3C7 /* PaySystem.swift */; };
+		3496C80C250582F0007193C0 /* InAppCollectionViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496C80B250582F0007193C0 /* InAppCollectionViewOutput.swift */; };
+		3496C80E2505830C007193C0 /* InAppCollectionViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496C80D2505830C007193C0 /* InAppCollectionViewInput.swift */; };
+		3496C81125058774007193C0 /* InAppCollectionViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496C81025058774007193C0 /* InAppCollectionViewPresenter.swift */; };
+		3496C81425058CBF007193C0 /* InAppCollectionConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496C81325058CBF007193C0 /* InAppCollectionConfigurator.swift */; };
 		34AA801325016F9D00BBDB53 /* WidgetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA801225016F9D00BBDB53 /* WidgetSize.swift */; };
 		34D45E0324FA750600A56152 /* MoneyHeadertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0224FA750600A56152 /* MoneyHeadertView.swift */; };
 		34D45E0824FA76F900A56152 /* MoneyHeaderViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */; };
@@ -82,8 +87,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		34017B9B24FD811E00AD15A5 /* InAppModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppModuleConfigurator.swift; sourceTree = "<group>"; };
-		34017B9D24FD815B00AD15A5 /* InAppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPresenter.swift; sourceTree = "<group>"; };
+		34017B9B24FD811E00AD15A5 /* InAppWidgetConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWidgetConfigurator.swift; sourceTree = "<group>"; };
+		34017B9D24FD815B00AD15A5 /* InAppWidgetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWidgetPresenter.swift; sourceTree = "<group>"; };
 		34017B9F24FD819C00AD15A5 /* InAppWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWidgetView.swift; sourceTree = "<group>"; };
 		34017BA124FD81B200AD15A5 /* InAppWidgetViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWidgetViewOutput.swift; sourceTree = "<group>"; };
 		34017BA324FD81D400AD15A5 /* InAppWidgetViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppWidgetViewInput.swift; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 		347A5C5024F7170B00EDF0D2 /* Circe-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Regular.ttf"; sourceTree = "<group>"; };
 		347A5C5124F7170B00EDF0D2 /* Circe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Bold.ttf"; sourceTree = "<group>"; };
 		347A5C5224F7170B00EDF0D2 /* Circe-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraBold.ttf"; sourceTree = "<group>"; };
+		347EEDE32506526D0033F148 /* CellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPresenter.swift; sourceTree = "<group>"; };
 		348925402500477B00035351 /* InAppCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCollectionViewCell.swift; sourceTree = "<group>"; };
 		3489254225004B5300035351 /* InAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCell.swift; sourceTree = "<group>"; };
 		3489254425004CBF00035351 /* InAppCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppCollectionView.swift; sourceTree = "<group>"; };
@@ -132,6 +138,10 @@
 		34951AA224F98CC6002FF3C7 /* AccountNumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNumberFormatter.swift; sourceTree = "<group>"; };
 		34951AA624F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerAccountDataUseCase.swift; sourceTree = "<group>"; };
 		34951AA824F99E7B002FF3C7 /* PaySystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaySystem.swift; sourceTree = "<group>"; };
+		3496C80B250582F0007193C0 /* InAppCollectionViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCollectionViewOutput.swift; sourceTree = "<group>"; };
+		3496C80D2505830C007193C0 /* InAppCollectionViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCollectionViewInput.swift; sourceTree = "<group>"; };
+		3496C81025058774007193C0 /* InAppCollectionViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCollectionViewPresenter.swift; sourceTree = "<group>"; };
+		3496C81325058CBF007193C0 /* InAppCollectionConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCollectionConfigurator.swift; sourceTree = "<group>"; };
 		34AA801225016F9D00BBDB53 /* WidgetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSize.swift; sourceTree = "<group>"; };
 		34D45E0224FA750600A56152 /* MoneyHeadertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeadertView.swift; sourceTree = "<group>"; };
 		34D45E0724FA76F900A56152 /* MoneyHeaderViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderViewInput.swift; sourceTree = "<group>"; };
@@ -193,7 +203,7 @@
 		34017B9924FD80B600AD15A5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				34017B9D24FD815B00AD15A5 /* InAppPresenter.swift */,
+				34017B9D24FD815B00AD15A5 /* InAppWidgetPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -201,7 +211,7 @@
 		34017B9A24FD80BD00AD15A5 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
-				34017B9B24FD811E00AD15A5 /* InAppModuleConfigurator.swift */,
+				34017B9B24FD811E00AD15A5 /* InAppWidgetConfigurator.swift */,
 			);
 			path = Configurator;
 			sourceTree = "<group>";
@@ -312,7 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				344E2A3524F81F8B00E9A24F /* UiElements */,
-				346A80AA24FF039A003841C7 /* Cells */,
 				344E2A3324F81EB100E9A24F /* Widgets */,
 			);
 			path = PresentationLayer;
@@ -332,6 +341,7 @@
 		344E2A3324F81EB100E9A24F /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				3489253F2500474100035351 /* InAppCollectionView */,
 				34017B9724FD806200AD15A5 /* InApp */,
 				344E2A3224F81EAB00E9A24F /* Money */,
 			);
@@ -376,14 +386,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		346A80AA24FF039A003841C7 /* Cells */ = {
+		346A80AA24FF039A003841C7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				346A80AB24FF03B2003841C7 /* MoneyWidgetCell.swift */,
 				3489254225004B5300035351 /* InAppCell.swift */,
-				3489253F2500474100035351 /* InAppCollectionView */,
 			);
-			path = Cells;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		346E7DBD24FC076800C9712D /* View */ = {
@@ -408,8 +417,9 @@
 		3489253F2500474100035351 /* InAppCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				3489254425004CBF00035351 /* InAppCollectionView.swift */,
-				348925402500477B00035351 /* InAppCollectionViewCell.swift */,
+				3496C80F25058340007193C0 /* View */,
+				3496C81225058BBC007193C0 /* Presenter */,
+				3496C81525058CC6007193C0 /* Configurator */,
 			);
 			path = InAppCollectionView;
 			sourceTree = "<group>";
@@ -446,6 +456,33 @@
 				34951AA424F99137002FF3C7 /* UseCases */,
 			);
 			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		3496C80F25058340007193C0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3489254425004CBF00035351 /* InAppCollectionView.swift */,
+				3496C80B250582F0007193C0 /* InAppCollectionViewOutput.swift */,
+				3496C80D2505830C007193C0 /* InAppCollectionViewInput.swift */,
+				348925402500477B00035351 /* InAppCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3496C81225058BBC007193C0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3496C81025058774007193C0 /* InAppCollectionViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3496C81525058CC6007193C0 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				3496C81325058CBF007193C0 /* InAppCollectionConfigurator.swift */,
+			);
+			path = Configurator;
 			sourceTree = "<group>";
 		};
 		34D45E0424FA767A00A56152 /* MoneyHeader */ = {
@@ -514,10 +551,12 @@
 		3AFCCB3724F7FC0E0083C773 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				346A80AA24FF039A003841C7 /* Cell */,
 				34FDC5682503EC830051783F /* ConnectionCell */,
 				346E7DBD24FC076800C9712D /* View */,
 				3ADF306024F8471000DE8045 /* Presenter */,
 				3ADF306124F8471500DE8045 /* Configurator */,
+				347EEDE32506526D0033F148 /* CellPresenter.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -696,8 +735,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347EEDE42506526D0033F148 /* CellPresenter.swift in Sources */,
 				34951AA724F9916B002FF3C7 /* GetCustomerAccountDataUseCase.swift in Sources */,
-				34017B9E24FD815B00AD15A5 /* InAppPresenter.swift in Sources */,
+				34017B9E24FD815B00AD15A5 /* InAppWidgetPresenter.swift in Sources */,
 				346E7DC124FC076800C9712D /* MainScreenViewController.swift in Sources */,
 				344E2A3C24F85A5000E9A24F /* MoneyPresenter.swift in Sources */,
 				346A80A924FEF5B8003841C7 /* ScreenType.swift in Sources */,
@@ -716,7 +756,7 @@
 				347A5C4424F7061900EDF0D2 /* MoneyWidgetView.swift in Sources */,
 				34D45E0824FA76F900A56152 /* MoneyHeaderViewInput.swift in Sources */,
 				340B083224F903D000F83766 /* MoneyWidgetViewInput.swift in Sources */,
-				34017B9C24FD811E00AD15A5 /* InAppModuleConfigurator.swift in Sources */,
+				34017B9C24FD811E00AD15A5 /* InAppWidgetConfigurator.swift in Sources */,
 				340B083324F903D000F83766 /* MoneyWidgetViewOutput.swift in Sources */,
 				344E2A2E24F81CD700E9A24F /* UIFont.swift in Sources */,
 				346A80A624FEF56A003841C7 /* UIDevice.swift in Sources */,
@@ -729,6 +769,7 @@
 				340B083624F9076600F83766 /* MoneyModuleConfigurator.swift in Sources */,
 				340B083D24F91FCD00F83766 /* Currency.swift in Sources */,
 				34D45E0C24FA77BA00A56152 /* MoneyHeaderPresenter.swift in Sources */,
+				3496C81425058CBF007193C0 /* InAppCollectionConfigurator.swift in Sources */,
 				340B083B24F91EAA00F83766 /* CardInfoView.swift in Sources */,
 				34AA801325016F9D00BBDB53 /* WidgetSize.swift in Sources */,
 				34D45E0324FA750600A56152 /* MoneyHeadertView.swift in Sources */,
@@ -736,8 +777,11 @@
 				340B083924F91E2F00F83766 /* CardInfo.swift in Sources */,
 				3ADF305E24F8427200DE8045 /* MainScreenConfigurator.swift in Sources */,
 				348925412500477B00035351 /* InAppCollectionViewCell.swift in Sources */,
+				3496C80E2505830C007193C0 /* InAppCollectionViewInput.swift in Sources */,
+				3496C81125058774007193C0 /* InAppCollectionViewPresenter.swift in Sources */,
 				346E7DC024FC076800C9712D /* MainScreenInput.swift in Sources */,
 				34017BAC24FD85F900AD15A5 /* HideCondition.swift in Sources */,
+				3496C80C250582F0007193C0 /* InAppCollectionViewOutput.swift in Sources */,
 				34017BA424FD81D400AD15A5 /* InAppWidgetViewInput.swift in Sources */,
 				3AFCCB3924F810CE0083C773 /* AppCoordinator.swift in Sources */,
 				3ADA2ACA24F84FCC00CB6E89 /* MainScreenModuleOutput.swift in Sources */,

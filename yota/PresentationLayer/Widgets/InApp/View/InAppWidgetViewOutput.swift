@@ -8,4 +8,9 @@
 
 import Foundation
 
-protocol InAppWidgetViewOutput {}
+protocol InAppWidgetViewOutput {
+    var closeAction: (() -> Void)? { get set }
+    
+    func viewIsReady()
+    func tapClose()
+}

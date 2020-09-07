@@ -23,28 +23,19 @@ extension MainScreenPresenter: MainScreenModuleOutput { }
 // MARK: - MainScreenViewOutput
 
 extension MainScreenPresenter: MainScreenViewOutput {
-    func didTriggerGetNumberOfRows() -> Int {
-        widgets.count
+    func viewDidLoad() {
+        return
     }
     
-    func didTriggerGetWidgetCell(index: Int, tableView: UITableView) -> UITableViewCell {
-        switch widgets[index] {
-        case MoneyWidgetCell.reuseID:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: MoneyWidgetCell.reuseID) as? MoneyWidgetCell else { fatalError("Wrong cell") }
-            return cell
-        case InAppCell.reuseID:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: InAppCell.reuseID) as? InAppCell else { fatalError("Wrong cell") }
-            return cell
-        default:
-            return UITableViewCell()
-        }
+    func getNumberOfRows() -> Int {
+         widgets.count
+    }
+    
+    func didTriggerGetWidgetCellReuseID(index: Int) -> String {
+        widgets[index]
     }
     
     func didTriggerGetWidgetSize(index: Int) -> CGFloat {
         WidgetSize.widgetSize(widgetReuseID: widgets[index]).height
-    }
-    
-    func didTriggerViewDidLoad() {
-        return
     }
 }

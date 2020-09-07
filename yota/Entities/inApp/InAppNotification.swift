@@ -12,4 +12,16 @@ struct InAppNotification {
     let displayCondition: DisplayCondition
     let text: String
     let hideCondition: HideCondition
+    let button: InAppNotificationButton?
+}
+
+struct InAppNotificationButton {
+    let title: String
+    let routeType: InAppNotificationRoute?
+}
+
+enum InAppNotificationRoute {
+    case inApplication
+    case url
+    case otherApp
 }

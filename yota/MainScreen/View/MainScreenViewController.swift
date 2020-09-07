@@ -12,7 +12,7 @@ final class MainScreenViewController: UIViewController {
 
     // MARK: - Property list
     
-    private let output: MainScreenViewOutput
+    private let presenter: MainScreenViewOutput
 
     private let tableView = UITableView()
     private var headerView: MoneyHeaderViewInput?
@@ -20,7 +20,7 @@ final class MainScreenViewController: UIViewController {
     // MARK: - Initialization
 
     init(output: MainScreenViewOutput) {
-        self.output = output
+        self.presenter = output
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -33,7 +33,7 @@ final class MainScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        output.didTriggerViewDidLoad()
+        presenter.viewDidLoad()
         setupTableView()
         setupHeaderView()
     }
@@ -84,11 +84,23 @@ final class MainScreenViewController: UIViewController {
 extension MainScreenViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        output.didTriggerGetNumberOfRows()
+        presenter.getNumberOfRows()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        output.didTriggerGetWidgetCell(index: indexPath.row, tableView: tableView)
+
+        let widgetReuseID = presenter.didTriggerGetWidgetCellReuseID(index: indexPath.row)
+        
+        switch widgetReuseID {
+        case MoneyWidgetCell.reuseID:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MoneyWidgetCell.reuseID) as? MoneyWidgetCell else { fallthrough }
+            return cell
+        case InAppCell.reuseID:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: InAppCell.reuseID) as? InAppCell else { fallthrough }
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }
 
@@ -97,7 +109,7 @@ extension MainScreenViewController: UITableViewDataSource {
 extension MainScreenViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        output.didTriggerGetWidgetSize(index: indexPath.row)
+        presenter.didTriggerGetWidgetSize(index: indexPath.row)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

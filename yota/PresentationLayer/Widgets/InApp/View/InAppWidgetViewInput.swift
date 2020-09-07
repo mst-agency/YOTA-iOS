@@ -6,6 +6,11 @@
 //  Copyright © 2020 MST. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol InAppWidgetViewInput: class {}
+protocol InAppWidgetViewInput: class {
+    func dropContent()
+    func displayButtonTitle(title: String)
+    func displayInAppContent(text: String)
+    func setButtonAction(action: @escaping (() -> Void))
+}
