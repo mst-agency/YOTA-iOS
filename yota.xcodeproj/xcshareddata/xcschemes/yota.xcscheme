@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "341C7D4E24F40E6600C6EA9C"
+               BuildableName = "yotaTests.xctest"
+               BlueprintName = "yotaTests"
+               ReferencedContainer = "container:yota.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "341C7D5924F40E6600C6EA9C"
+               BuildableName = "yotaUITests.xctest"
+               BlueprintName = "yotaUITests"
+               ReferencedContainer = "container:yota.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
