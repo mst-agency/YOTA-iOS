@@ -28,10 +28,9 @@ final class AppCoordinator {
 extension AppCoordinator: Coordinator {
 
     func start() {
-        let (view, presenter) = MainScreenConfigurator().configure()
+        let (view, _) = MainScreenConfigurator().configure()
         let navigationViewController = UINavigationController(rootViewController: view)
         navigationViewController.isNavigationBarHidden = true
-        // по идее где-то тут надо будет задать презентеру замыкание, по срабатыванию которого будем уходить из приложения
         window.rootViewController = navigationViewController
         window.makeKeyAndVisible()
     }
