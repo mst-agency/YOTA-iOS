@@ -28,7 +28,7 @@ final class AppCoordinator {
 extension AppCoordinator: Coordinator {
 
     func start() {
-        let (view, _) = MainScreenConfigurator().configure()
+        let view = MainScreenConfigurator().configure()
         let navigationViewController = UINavigationController(rootViewController: view)
         navigationViewController.isNavigationBarHidden = true
         window.rootViewController = navigationViewController

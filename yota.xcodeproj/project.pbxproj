@@ -77,7 +77,6 @@
 		3AF0E43C250670DF00E97FB1 /* MockGetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E438250670DF00E97FB1 /* MockGetProfileUseCase.swift */; };
 		3AF0E43D250670DF00E97FB1 /* ProfileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E439250670DF00E97FB1 /* ProfileLoader.swift */; };
 		3AF0E4542506710000E97FB1 /* TestMainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4412506710000E97FB1 /* TestMainScreenPresenter.swift */; };
-		3AF0E4552506710000E97FB1 /* TestMainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4432506710000E97FB1 /* TestMainScreenConfigurator.swift */; };
 		3AF0E4562506710000E97FB1 /* TestConnectionCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4462506710000E97FB1 /* TestConnectionCellPresenter.swift */; };
 		3AF0E4572506710000E97FB1 /* TestConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E4482506710000E97FB1 /* TestConnectionCell.swift */; };
 		3AF0E4582506710000E97FB1 /* TestUIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0E44A2506710000E97FB1 /* TestUIFont.swift */; };
@@ -196,7 +195,6 @@
 		3AF0E438250670DF00E97FB1 /* MockGetProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockGetProfileUseCase.swift; sourceTree = "<group>"; };
 		3AF0E439250670DF00E97FB1 /* ProfileLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLoader.swift; sourceTree = "<group>"; };
 		3AF0E4412506710000E97FB1 /* TestMainScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMainScreenPresenter.swift; sourceTree = "<group>"; };
-		3AF0E4432506710000E97FB1 /* TestMainScreenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMainScreenConfigurator.swift; sourceTree = "<group>"; };
 		3AF0E4462506710000E97FB1 /* TestConnectionCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConnectionCellPresenter.swift; sourceTree = "<group>"; };
 		3AF0E4482506710000E97FB1 /* TestConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConnectionCell.swift; sourceTree = "<group>"; };
 		3AF0E44A2506710000E97FB1 /* TestUIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUIFont.swift; sourceTree = "<group>"; };
@@ -677,7 +675,6 @@
 			isa = PBXGroup;
 			children = (
 				3AF0E4402506710000E97FB1 /* Presenter */,
-				3AF0E4422506710000E97FB1 /* Configurator */,
 				3AF0E4442506710000E97FB1 /* ConnectionCell */,
 			);
 			path = MainScreen;
@@ -689,14 +686,6 @@
 				3AF0E4412506710000E97FB1 /* TestMainScreenPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		3AF0E4422506710000E97FB1 /* Configurator */ = {
-			isa = PBXGroup;
-			children = (
-				3AF0E4432506710000E97FB1 /* TestMainScreenConfigurator.swift */,
-			);
-			path = Configurator;
 			sourceTree = "<group>";
 		};
 		3AF0E4442506710000E97FB1 /* ConnectionCell */ = {
@@ -1075,7 +1064,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				347EEE152506CE2D0033F148 /* GetCustomerAccountDataStub.swift in Sources */,
-				3AF0E4552506710000E97FB1 /* TestMainScreenConfigurator.swift in Sources */,
 				3AF0E4562506710000E97FB1 /* TestConnectionCellPresenter.swift in Sources */,
 				347EEE102506CD3E0033F148 /* Creator.swift in Sources */,
 				347EEE132506CDF00033F148 /* CardInfoViewMock.swift in Sources */,

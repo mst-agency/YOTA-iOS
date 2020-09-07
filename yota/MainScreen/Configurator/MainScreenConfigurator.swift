@@ -10,11 +10,11 @@ import UIKit
 
 final class MainScreenConfigurator {
 
-    func configure() -> (view: MainScreenViewController, output: MainScreenModuleOutput) {
+    func configure() -> MainScreenViewController {
         let presenter = MainScreenPresenter()
         let view = MainScreenViewController(output: presenter)
         presenter.view = view
 
-        return(view: view, output: presenter)
+        return view
     }
 }
