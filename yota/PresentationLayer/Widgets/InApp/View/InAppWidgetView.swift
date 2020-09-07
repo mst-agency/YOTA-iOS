@@ -26,6 +26,7 @@ final class InAppWidgetView: UIView {
         label.text = ""
         label.textAlignment = .center
         label.textColor = UIColor.InApp.title
+        label.accessibilityIdentifier = AccessibilityIdentifiers.InApp.inAppTitle
         return label
     }()
 
@@ -40,6 +41,7 @@ final class InAppWidgetView: UIView {
         button.isHidden = true
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(actionButtonTap), for: .touchUpInside)
+        button.accessibilityIdentifier = AccessibilityIdentifiers.InApp.inAppActionButton
         return button
     }()
     
@@ -49,6 +51,7 @@ final class InAppWidgetView: UIView {
         button.setImage(#imageLiteral(resourceName: "inAppClose"), for: .normal)
         button.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         button.addTarget(self, action: #selector(closeButtonTap), for: .touchUpInside)
+        button.accessibilityIdentifier = AccessibilityIdentifiers.InApp.inAppCloseButton
         return button
     }()
     
