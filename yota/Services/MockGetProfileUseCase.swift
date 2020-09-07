@@ -13,7 +13,7 @@ final class MockGetProfileUseCase {
 
     // MARK: - Property list
 
-    weak var cellPresenter: ConnectionCellOutput?
+    weak var cellPresenter: ConnectionCellExternalInput?
 
     // MARK: - Private methods
 

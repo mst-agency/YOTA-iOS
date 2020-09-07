@@ -10,6 +10,4 @@ import YotaModels
 
 protocol ConnectionCellOutput: AnyObject {
     func configure()
-    func successLoading(_ profile: Profile)
-    func loadingError(_ error: ServiceError)
 }

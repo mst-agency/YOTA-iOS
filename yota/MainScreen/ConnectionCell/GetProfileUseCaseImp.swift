@@ -15,7 +15,7 @@ final class GetProfileUseCaseImp {
 
     private let profileLoader: ProfileLoader
     private let codableService: CodableService
-    private weak var presenter: ConnectionCellOutput?
+    private weak var presenter: ConnectionCellExternalInput?
 
     // MARK: - Initialization
 

@@ -32,6 +32,11 @@ extension ConnectionCellPresenter: ConnectionCellOutput {
     func configure() {
         useCase.getProfile()
     }
+}
+
+// MARK: - ConnectionCellExternalInput
+
+extension ConnectionCellPresenter: ConnectionCellExternalInput {
 
     func successLoading(_ profile: Profile) {
         self.profile = profile
@@ -47,7 +52,7 @@ extension ConnectionCellPresenter: ConnectionCellOutput {
     }
 
     func loadingError(_ error: ServiceError) {
-        // TODO: - Отображать ошибку
+        cell?.showError(error)
     }
 }
 

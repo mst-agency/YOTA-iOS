@@ -80,4 +80,6 @@ extension ConnectionCell: ConnectionCellInput {
         priceView.setPriceDescriptionLabelText(descriptionText)
         priceView.setPriceLabelText(price)
     }
+
+    func showError(_ error: ServiceError) { }
 }
