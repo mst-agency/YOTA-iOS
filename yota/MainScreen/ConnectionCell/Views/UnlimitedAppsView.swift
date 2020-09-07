@@ -145,6 +145,7 @@ final class UnlimitedAppsView: UIView {
             $0.translatesAutoresizingMaskIntoConstraints = false
             addSubview($0)
         }
+        unlimitedAppsImages.distribution = .fillEqually
 
         switch UIDevice.screenType {
         case .iphoneX: setupForIPhoneX()

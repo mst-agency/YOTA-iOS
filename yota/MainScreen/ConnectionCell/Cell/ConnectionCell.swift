@@ -22,6 +22,13 @@ final class ConnectionCell: UITableViewCell {
     private let connectLabelAndNumberView = ConnectionLabelAndNumberView()
     private let unlimitedAppsView = UnlimitedAppsView()
     private let priceView = PriceView()
+    private var horizontalInset: CGFloat {
+        switch UIDevice.screenType {
+        case .iphoneX: return 8
+        case .iphone6plus, .iphone6, .iphone5: return 12
+        case .ipad: return 114
+        }
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -36,15 +43,19 @@ final class ConnectionCell: UITableViewCell {
     
     private func setup() {
         contentView.addSubview(containerView)
+        backgroundColor = .clear
+        containerView.backgroundColor = .white
         containerView.translatesAutoresizingMaskIntoConstraints = false
         [connectLabelAndNumberView, unlimitedAppsView, priceView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             containerView.addSubview($0)
         }
+        containerView.layer.cornerRadius = 12
+        containerView.layer.shadowOffset = CGSize(width: containerView.bounds.width, height: containerView.bounds.height + 6)
         NSLayoutConstraint.activate([
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: horizontalInset),
             containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -horizontalInset),
             containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
 
             connectLabelAndNumberView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),

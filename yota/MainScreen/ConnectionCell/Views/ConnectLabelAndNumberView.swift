@@ -154,7 +154,7 @@ final class ConnectionLabelAndNumberView: UIView {
     }
 
     private func setupColors() {
-        numberView.backgroundColor = UIColor.CardIfno.background
+        numberView.backgroundColor = UIColor.CardIfno.wigetBackground
         numberLabel.textColor = UIColor.Money.title
         let gradientColors = [UIColor.Gradient.firstColor, UIColor.Gradient.secondColor]
         connectionLabel.setGradient(colors: gradientColors)

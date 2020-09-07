@@ -7,22 +7,22 @@
 //
 
 import Foundation
+import CoreGraphics
 
 final class MainScreenPresenter {
 
     // MARK: - Property list
 
     var view: MainScreenInput?
-    private var widgets: [String] = [MoneyWidgetCell.reuseID, InAppCell.reuseID]
-    private var cellPresenters = [CellPresenter]()
+    private var widgets: [String] = [MoneyWidgetCell.reuseID, InAppCell.reuseID, ConnectionCell.reuseID]
 
     // MARK: - Private methods
 
-    private func configureConnectionCellPresenter() {
+    private func configureConnectionCellPresenter() -> CellPresenter {
         let mockUseCase = MockGetProfileUseCase()
         let connectionCellPresenter = ConnectionCellPresenter(useCase: mockUseCase, updateCellSizeAction: updateCellSizeAction)
         mockUseCase.cellPresenter = connectionCellPresenter
-        cellPresenters.append(connectionCellPresenter)
+        return connectionCellPresenter
     }
 
     private lazy var updateCellSizeAction: () -> Void = { [weak self] in
@@ -38,9 +38,9 @@ extension MainScreenPresenter: MainScreenModuleOutput { }
 // MARK: - MainScreenViewOutput
 
 extension MainScreenPresenter: MainScreenViewOutput {
-    func viewDidLoad() {
-        configureConnectionCellPresenter()
-        view?.reloadTable()
+
+    func getCellPresenter() -> CellPresenter {
+        return configureConnectionCellPresenter()
     }
     
     func getNumberOfRows() -> Int {

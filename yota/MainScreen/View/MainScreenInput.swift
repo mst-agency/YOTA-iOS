@@ -9,6 +9,5 @@
 import Foundation
 
 protocol MainScreenInput: AnyObject {
-    func reloadTable()
     func recalculateCellSize()
 }

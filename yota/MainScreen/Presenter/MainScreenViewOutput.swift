@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import CoreGraphics
 
 protocol MainScreenViewOutput {
-    func viewDidLoad()
     func getNumberOfRows() -> Int
+    func getCellPresenter() -> CellPresenter
     func didTriggerGetWidgetCellReuseID(index: Int) -> String
     func didTriggerGetWidgetSize(index: Int) -> CGFloat
 }
