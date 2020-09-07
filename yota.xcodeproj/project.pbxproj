@@ -45,6 +45,11 @@
 		347A5C5524F7170B00EDF0D2 /* Circe-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5224F7170B00EDF0D2 /* Circe-ExtraBold.ttf */; };
 		347EEDE42506526D0033F148 /* CellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEDE32506526D0033F148 /* CellPresenter.swift */; };
 		347EEDE625065CB80033F148 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEDE525065CB80033F148 /* AccessibilityIdentifiers.swift */; };
+		347EEE0D2506CC7D0033F148 /* TestHeaderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEE0C2506CC7D0033F148 /* TestHeaderPresenter.swift */; };
+		347EEE102506CD3E0033F148 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEE0F2506CD3E0033F148 /* Creator.swift */; };
+		347EEE132506CDF00033F148 /* CardInfoViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEE122506CDF00033F148 /* CardInfoViewMock.swift */; };
+		347EEE152506CE2D0033F148 /* GetCustomerAccountDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEE142506CE2D0033F148 /* GetCustomerAccountDataStub.swift */; };
+		347EEE172506CE560033F148 /* MoneyHeaderWidgetViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEE162506CE560033F148 /* MoneyHeaderWidgetViewMock.swift */; };
 		348925412500477B00035351 /* InAppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348925402500477B00035351 /* InAppCollectionViewCell.swift */; };
 		3489254325004B5300035351 /* InAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254225004B5300035351 /* InAppCell.swift */; };
 		3489254525004CBF00035351 /* InAppCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254425004CBF00035351 /* InAppCollectionView.swift */; };
@@ -159,6 +164,11 @@
 		347A5C5224F7170B00EDF0D2 /* Circe-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraBold.ttf"; sourceTree = "<group>"; };
 		347EEDE32506526D0033F148 /* CellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPresenter.swift; sourceTree = "<group>"; };
 		347EEDE525065CB80033F148 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		347EEE0C2506CC7D0033F148 /* TestHeaderPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHeaderPresenter.swift; sourceTree = "<group>"; };
+		347EEE0F2506CD3E0033F148 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
+		347EEE122506CDF00033F148 /* CardInfoViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoViewMock.swift; sourceTree = "<group>"; };
+		347EEE142506CE2D0033F148 /* GetCustomerAccountDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerAccountDataStub.swift; sourceTree = "<group>"; };
+		347EEE162506CE560033F148 /* MoneyHeaderWidgetViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderWidgetViewMock.swift; sourceTree = "<group>"; };
 		348925402500477B00035351 /* InAppCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCollectionViewCell.swift; sourceTree = "<group>"; };
 		3489254225004B5300035351 /* InAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCell.swift; sourceTree = "<group>"; };
 		3489254425004CBF00035351 /* InAppCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppCollectionView.swift; sourceTree = "<group>"; };
@@ -349,6 +359,7 @@
 		341C7D5224F40E6600C6EA9C /* yotaTests */ = {
 			isa = PBXGroup;
 			children = (
+				347EEE0E2506CD070033F148 /* Helpers */,
 				3AF0E44B2506710000E97FB1 /* Mocks */,
 				3AF0E43E2506710000E97FB1 /* Test */,
 				341C7D5524F40E6600C6EA9C /* Info.plist */,
@@ -471,6 +482,40 @@
 				347A5C5024F7170B00EDF0D2 /* Circe-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		347EEE0A2506CC7D0033F148 /* MoneyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				347EEE0B2506CC7D0033F148 /* Presenter */,
+			);
+			path = MoneyHeader;
+			sourceTree = "<group>";
+		};
+		347EEE0B2506CC7D0033F148 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				347EEE0C2506CC7D0033F148 /* TestHeaderPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		347EEE0E2506CD070033F148 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				347EEE0F2506CD3E0033F148 /* Creator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		347EEE112506CDB20033F148 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				347EEE122506CDF00033F148 /* CardInfoViewMock.swift */,
+				347EEE162506CE560033F148 /* MoneyHeaderWidgetViewMock.swift */,
+				347EEE142506CE2D0033F148 /* GetCustomerAccountDataStub.swift */,
+			);
+			path = HeaderView;
 			sourceTree = "<group>";
 		};
 		3489253F2500474100035351 /* InAppCollectionView */ = {
@@ -618,6 +663,7 @@
 		3AF0E43E2506710000E97FB1 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				347EEE0A2506CC7D0033F148 /* MoneyHeader */,
 				3AF0E43F2506710000E97FB1 /* MainScreen */,
 				3AF0E4492506710000E97FB1 /* Extensions */,
 			);
@@ -686,6 +732,7 @@
 		3AF0E44B2506710000E97FB1 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				347EEE112506CDB20033F148 /* HeaderView */,
 				3AF0E44C2506710000E97FB1 /* MainScreen */,
 			);
 			path = Mocks;
@@ -1045,13 +1092,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347EEE152506CE2D0033F148 /* GetCustomerAccountDataStub.swift in Sources */,
 				3AF0E4552506710000E97FB1 /* TestMainScreenConfigurator.swift in Sources */,
 				3AF0E4562506710000E97FB1 /* TestConnectionCellPresenter.swift in Sources */,
+				347EEE102506CD3E0033F148 /* Creator.swift in Sources */,
+				347EEE132506CDF00033F148 /* CardInfoViewMock.swift in Sources */,
 				3AF0E4542506710000E97FB1 /* TestMainScreenPresenter.swift in Sources */,
 				3AF0E45A2506710000E97FB1 /* MockConnectionCellPresenter.swift in Sources */,
 				3AF0E4592506710000E97FB1 /* MockMainScreenViewController.swift in Sources */,
+				347EEE0D2506CC7D0033F148 /* TestHeaderPresenter.swift in Sources */,
 				3AF0E45B2506710000E97FB1 /* MockConnectionCell.swift in Sources */,
 				3AF0E4582506710000E97FB1 /* TestUIFont.swift in Sources */,
+				347EEE172506CE560033F148 /* MoneyHeaderWidgetViewMock.swift in Sources */,
 				3AF0E4572506710000E97FB1 /* TestConnectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
