@@ -149,6 +149,12 @@ final class PriceView: UIView {
         separatorView.backgroundColor = UIColor.Connection.separatorColor
     }
 
+    private func addAccessibilityIdentifiers() {
+        priceDescriptionLabel.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.priceDescriptionLabel
+        priceLabel.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.priceLabel
+        separatorView.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.separatorView
+    }
+
     private func setup() {
         [priceDescriptionLabel, priceLabel, separatorView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -163,6 +169,7 @@ final class PriceView: UIView {
         case .ipad: setupForIPad()
         }
 
+        addAccessibilityIdentifiers()
         setupColors()
     }
 }

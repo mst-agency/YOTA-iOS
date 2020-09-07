@@ -36,19 +36,10 @@ final class UnlimitedAppsView: UIView {
 
     func setImages(_ images: [UIImage]) {
         unlimitedAppsImages.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        
-        let imageHeight: CGFloat
-
-        switch UIDevice.screenType {
-        case .iphoneX, .iphone6plus: imageHeight = 18
-        case .iphone6, .iphone5: imageHeight = 16
-        case .ipad: imageHeight = 22
-        }
 
         images.forEach {
             let imageView = UIImageView(image: $0)
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.heightAnchor.constraint(equalToConstant: imageHeight).isActive = true
+            imageView.contentMode = .scaleAspectFit
             unlimitedAppsImages.addArrangedSubview(imageView)
         }
     }
@@ -140,6 +131,15 @@ final class UnlimitedAppsView: UIView {
         ])
     }
 
+    private func setupColors() {
+        unlimitedAppsLabel.textColor = UIColor.Money.title
+    }
+
+    private func addAccessibilityIdenfiers() {
+        unlimitedAppsLabel.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.unlimitedAppsLabel
+        unlimitedAppsImages.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.unlimitedAppsImages
+    }
+
     private func setup() {
         [unlimitedAppsLabel, unlimitedAppsImages].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -153,5 +153,8 @@ final class UnlimitedAppsView: UIView {
         case .iphone5: setupForIPhone5()
         case .ipad: setupForIPad()
         }
+
+        setupColors()
+        addAccessibilityIdenfiers()
     }
 }

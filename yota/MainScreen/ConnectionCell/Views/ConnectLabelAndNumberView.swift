@@ -41,6 +41,7 @@ final class ConnectionLabelAndNumberView: UIView {
     private func setupForIPhoneX() {
         connectionLabel.font = .circeBold(size: 16)
         numberLabel.font = .circeBold(size: 16)
+        numberView.layer.cornerRadius = 13.5
 
         NSLayoutConstraint.activate([
             connectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
@@ -63,6 +64,7 @@ final class ConnectionLabelAndNumberView: UIView {
     private func setupForIPhone6Plus() {
         connectionLabel.font = .circeBold(size: 16)
         numberLabel.font = .circeBold(size: 16)
+        numberView.layer.cornerRadius = 13.5
 
         NSLayoutConstraint.activate([
             connectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
@@ -85,6 +87,7 @@ final class ConnectionLabelAndNumberView: UIView {
     private func setupForIPhone6() {
         connectionLabel.font = .circeBold(size: 15)
         numberLabel.font = .circeBold(size: 16)
+        numberView.layer.cornerRadius = 13.5
 
         NSLayoutConstraint.activate([
             connectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
@@ -107,6 +110,7 @@ final class ConnectionLabelAndNumberView: UIView {
     private func setupForIPhone5() {
         connectionLabel.font = .circeBold(size: 15)
         numberLabel.font = .circeBold(size: 16)
+        numberView.layer.cornerRadius = 13.5
 
         NSLayoutConstraint.activate([
             connectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 14),
@@ -129,6 +133,7 @@ final class ConnectionLabelAndNumberView: UIView {
     private func setupForIPad() {
         connectionLabel.font = .circeBold(size: 24)
         numberLabel.font = .circeBold(size: 18)
+        numberView.layer.cornerRadius = 19
 
         NSLayoutConstraint.activate([
             connectionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
@@ -148,17 +153,29 @@ final class ConnectionLabelAndNumberView: UIView {
         ])
     }
 
+    private func setupColors() {
+        numberView.backgroundColor = UIColor.CardIfno.background
+        numberLabel.textColor = UIColor.Money.title
+        let gradientColors = [UIColor.Gradient.firstColor, UIColor.Gradient.secondColor]
+        connectionLabel.setGradient(colors: gradientColors)
+    }
+
+    private func addAccessibilityIdenfiers() {
+        connectionLabel.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.connectionLabel
+        numberView.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.connectionLabel
+        numberLabel.accessibilityIdentifier = AccessibilityIdentifiers.ConnectionModule.numberLabel
+    }
+
     private func setup() {
+
+        addAccessibilityIdenfiers()
+
         [connectionLabel, numberView].forEach {
             addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         numberView.addSubview(numberLabel)
         numberLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        let gradientColors = [UIColor.Gradient.firstColor, UIColor.Gradient.secondColor]
-
-        connectionLabel.setGradient(colors: gradientColors)
 
         switch UIDevice.screenType {
         case .iphoneX: setupForIPhoneX()
@@ -167,5 +184,8 @@ final class ConnectionLabelAndNumberView: UIView {
         case .iphone5: setupForIPhone5()
         case .ipad: setupForIPad()
         }
+
+        setupColors()
+        addAccessibilityIdenfiers()
     }
 }
