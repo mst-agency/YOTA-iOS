@@ -50,6 +50,7 @@
 		347EEE132506CDF00033F148 /* CardInfoViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEE122506CDF00033F148 /* CardInfoViewMock.swift */; };
 		347EEE152506CE2D0033F148 /* GetCustomerAccountDataStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEE142506CE2D0033F148 /* GetCustomerAccountDataStub.swift */; };
 		347EEE172506CE560033F148 /* MoneyHeaderWidgetViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEE162506CE560033F148 /* MoneyHeaderWidgetViewMock.swift */; };
+		347EEE192506D7DE0033F148 /* AccountLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEE182506D7DE0033F148 /* AccountLoader.swift */; };
 		348925412500477B00035351 /* InAppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348925402500477B00035351 /* InAppCollectionViewCell.swift */; };
 		3489254325004B5300035351 /* InAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254225004B5300035351 /* InAppCell.swift */; };
 		3489254525004CBF00035351 /* InAppCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254425004CBF00035351 /* InAppCollectionView.swift */; };
@@ -169,6 +170,7 @@
 		347EEE122506CDF00033F148 /* CardInfoViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoViewMock.swift; sourceTree = "<group>"; };
 		347EEE142506CE2D0033F148 /* GetCustomerAccountDataStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerAccountDataStub.swift; sourceTree = "<group>"; };
 		347EEE162506CE560033F148 /* MoneyHeaderWidgetViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyHeaderWidgetViewMock.swift; sourceTree = "<group>"; };
+		347EEE182506D7DE0033F148 /* AccountLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountLoader.swift; sourceTree = "<group>"; };
 		348925402500477B00035351 /* InAppCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCollectionViewCell.swift; sourceTree = "<group>"; };
 		3489254225004B5300035351 /* InAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCell.swift; sourceTree = "<group>"; };
 		3489254425004CBF00035351 /* InAppCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppCollectionView.swift; sourceTree = "<group>"; };
@@ -656,6 +658,7 @@
 				3AF0E437250670DF00E97FB1 /* NetworkService.swift */,
 				3AF0E438250670DF00E97FB1 /* MockGetProfileUseCase.swift */,
 				3AF0E439250670DF00E97FB1 /* ProfileLoader.swift */,
+				347EEE182506D7DE0033F148 /* AccountLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1082,6 +1085,7 @@
 				34017BA424FD81D400AD15A5 /* InAppWidgetViewInput.swift in Sources */,
 				3AFCCB3924F810CE0083C773 /* AppCoordinator.swift in Sources */,
 				3ADA2ACA24F84FCC00CB6E89 /* MainScreenModuleOutput.swift in Sources */,
+				347EEE192506D7DE0033F148 /* AccountLoader.swift in Sources */,
 				3ADA2AC824F84FB800CB6E89 /* MainScreenViewOutput.swift in Sources */,
 				3AFCCB3624F7FA450083C773 /* MainScreenPresenter.swift in Sources */,
 				341C7D3D24F40E6500C6EA9C /* AppDelegate.swift in Sources */,
