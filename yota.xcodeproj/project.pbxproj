@@ -45,6 +45,7 @@
 		347A5C5424F7170B00EDF0D2 /* Circe-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5124F7170B00EDF0D2 /* Circe-Bold.ttf */; };
 		347A5C5524F7170B00EDF0D2 /* Circe-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 347A5C5224F7170B00EDF0D2 /* Circe-ExtraBold.ttf */; };
 		347EEDE42506526D0033F148 /* CellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEDE32506526D0033F148 /* CellPresenter.swift */; };
+		347EEDE625065CB80033F148 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347EEDE525065CB80033F148 /* AccessibilityIdentifiers.swift */; };
 		348925412500477B00035351 /* InAppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348925402500477B00035351 /* InAppCollectionViewCell.swift */; };
 		3489254325004B5300035351 /* InAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254225004B5300035351 /* InAppCell.swift */; };
 		3489254525004CBF00035351 /* InAppCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3489254425004CBF00035351 /* InAppCollectionView.swift */; };
@@ -131,6 +132,7 @@
 		347A5C5124F7170B00EDF0D2 /* Circe-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-Bold.ttf"; sourceTree = "<group>"; };
 		347A5C5224F7170B00EDF0D2 /* Circe-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circe-ExtraBold.ttf"; sourceTree = "<group>"; };
 		347EEDE32506526D0033F148 /* CellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPresenter.swift; sourceTree = "<group>"; };
+		347EEDE525065CB80033F148 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
 		348925402500477B00035351 /* InAppCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCollectionViewCell.swift; sourceTree = "<group>"; };
 		3489254225004B5300035351 /* InAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCell.swift; sourceTree = "<group>"; };
 		3489254425004CBF00035351 /* InAppCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppCollectionView.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				346A80A824FEF5B7003841C7 /* ScreenType.swift */,
+				347EEDE525065CB80033F148 /* AccessibilityIdentifiers.swift */,
 				34AA801225016F9D00BBDB53 /* WidgetSize.swift */,
 			);
 			path = Helpers;
@@ -762,6 +765,7 @@
 				346A80A624FEF56A003841C7 /* UIDevice.swift in Sources */,
 				346A80AC24FF03B2003841C7 /* MoneyWidgetCell.swift in Sources */,
 				3489254325004B5300035351 /* InAppCell.swift in Sources */,
+				347EEDE625065CB80033F148 /* AccessibilityIdentifiers.swift in Sources */,
 				34951AA324F98CC6002FF3C7 /* AccountNumberFormatter.swift in Sources */,
 				344E2A4224F87A3900E9A24F /* MoneyModuleOutput.swift in Sources */,
 				34FDC56B2503EC830051783F /* GradientLabel.swift in Sources */,
